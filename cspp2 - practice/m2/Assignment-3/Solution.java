@@ -1,10 +1,17 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 28th August, 2018.
+ */
 import java.util.Scanner;
-
+/**
+ * Scanner class
+ */
 public class Solution {
-	/*
-	Do not modify this main function.
-	*/
-	
+	/**
+	 * Main Function
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
@@ -12,13 +19,19 @@ public class Solution {
         long result = power(base,exponent);
         System.out.println(result);
 	}
+
+	/**
+	 * Power Function
+	 *
+	 * @param      base      The base
+	 * @param      exponent  The exponent
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static long power(final int base, final int exponent) {
 		final int num = 1;
 		if (exponent == 0) {
 			return num;
 		} else return base * power(base, exponent - 1);
 	}
-	/*
-	Need to write the power function and print the output.
-	*/
 }
