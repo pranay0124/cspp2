@@ -44,5 +44,3 @@ public final class Solution {
         }
     }
 }
-
-
