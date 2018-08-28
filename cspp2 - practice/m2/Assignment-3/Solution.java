@@ -4,11 +4,18 @@
  */
 import java.util.Scanner;
 /**
- * Scanner class
+ * Scanner class.
  */
 public class Solution {
 	/**
-	 * Main Function
+	 * Constructor.
+	 */
+	private Solution() {
+		// Zero Parameter Constructor
+	}
+	
+	/**
+	 * Main Function.
 	 *
 	 * @param      args  The arguments
 	 */
@@ -21,7 +28,7 @@ public class Solution {
 	}
 
 	/**
-	 * Power Function
+	 * Power Function.
 	 *
 	 * @param      base      The base
 	 * @param      exponent  The exponent
