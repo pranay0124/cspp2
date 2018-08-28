@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
-     * Constructor
+     * Constructor.
      */
     private Solution() {
         // Zero Parameter Construction
@@ -23,8 +23,8 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static double rootsOfQuadraticEquation(final int a,final int b,final int c) {
-        int z = 4;
+    public static double rootsOfQuadraticEquation(final int a, final int b, final int c) {
+        final int z = 4;
         double sqrt = Math.sqrt((b * b) - (z * a * c));
         double root1 = ((-b) + (sqrt)) / (2 * a);
         double root2 = ((-b) - (sqrt)) / (2 * a);
