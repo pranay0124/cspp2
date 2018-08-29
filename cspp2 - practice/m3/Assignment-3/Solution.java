@@ -4,9 +4,9 @@
  */
 import java.util.Scanner;
 /**
- * Class Solution
+ * Class Solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Construction.
      */
@@ -21,9 +21,9 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int gcd(final int n1,final int n2) {
-        int min_val = Math.min(n1, n2);
-        for (int i = min_val; i >= 1; i--) {
+    public static int gcd(final int n1, final int n2) {
+        int minval = Math.min(n1, n2);
+        for (int i = minval; i >= 1; i--) {
             if ((n1 % i == 0) && (n2 % i == 0)) {
                 return i;
             }
@@ -41,7 +41,7 @@ public class Solution {
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         Solution obj = new Solution();
-        int ans = obj.gcd(n1,n2);
+        int ans = obj.gcd(n1, n2);
         System.out.println(ans);
     }
 }
