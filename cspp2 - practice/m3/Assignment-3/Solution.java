@@ -3,6 +3,9 @@
  * Date : 29th August,2018.
  */
 import java.util.Scanner;
+/**
+ * Class Solution
+ */
 public class Solution {
     /**
      * Construction.
