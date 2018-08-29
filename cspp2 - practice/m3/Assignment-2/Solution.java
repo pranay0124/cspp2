@@ -7,11 +7,11 @@ import java.util.Scanner;
  * Scanner class.
  */
 public final class Solution {
-	/**.
-	 * Constructor.
-	 */
+    /**.
+     * Constructor.
+     */
     private Solution() {
-    	// Zero Parameter Constructor.
+        // Zero Parameter Constructor.
     }
 
     /**
@@ -29,10 +29,10 @@ public final class Solution {
             final int ten = 10;
             final int seven = 7;
             while (number != zero) {
-            	if (number % ten == seven) {
-            		count = count + 1;
-            	}
-            	number = number / 10;
+                if (number % ten == seven) {
+                    count = count + 1;
+                }
+                number = number / ten;
             }
         }
         System.out.println(count);
