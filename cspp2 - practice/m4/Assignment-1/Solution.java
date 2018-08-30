@@ -32,6 +32,6 @@ public final class Solution {
                 max = arrList[j];
             }
         }
-        System.out.println("Maximum : " + max);
+        System.out.println(max);
     }
 }
