@@ -14,8 +14,8 @@ public class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		//Solution obj1 = new Solution();
-		System.out.println(matrix());
-        //System.out.println(matrix1);
+		Solution obj1 = new Solution();
+		int[][] matrix1 = obj1.matrix();
+        System.out.println(matrix1);
 	}
 }
