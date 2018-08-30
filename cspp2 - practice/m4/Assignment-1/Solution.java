@@ -2,7 +2,7 @@
  * Author : Pranay Kumar Y.
  * Date : 30th August, 2018.
  */
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class to find the maximum value in the array.
  */
