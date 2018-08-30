@@ -10,7 +10,6 @@ public class Solution {
                 matrix1[i][j] = s.nextInt();
             }
         }
-        
         int row2 = s.nextInt();
         int column2 = s.nextInt();
         int[][] matrix2 = new int[row2][column2];
