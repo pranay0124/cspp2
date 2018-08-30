@@ -8,6 +8,12 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
+     * Constructor.
+     */
+    private Solution() {
+        // Zero Parameter Constructor.
+    }
+    /**
      * Main function.
      *
      * @param      args  The arguments
