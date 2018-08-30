@@ -1,6 +1,18 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 30th August, 2018.
+ */
 import java.util.Scanner;
-public class Solution {
-    public static void main(String[] args) {
+/**
+ * Class for matrix addition.
+ */
+public final class Solution {
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int row1 = s.nextInt();
         int column1 = s.nextInt();
