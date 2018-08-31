@@ -21,7 +21,7 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static String reverseString(String str) {
+    public static String reverseString(final String str) {
         int len = str.length();
         String reverse = "";
         for (int i = len - 1; i >= 0; i--) {
