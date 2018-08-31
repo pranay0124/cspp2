@@ -6,7 +6,7 @@ public class Solution {
 	*/
 	public static String reverseString(String str) {
 		int len = str.length();
-		String reverse = " ";
+		String reverse = "";
 		for (int i = len - 1; i >= 0; i--) {
 			reverse = reverse + str.charAt(i);
 		}
