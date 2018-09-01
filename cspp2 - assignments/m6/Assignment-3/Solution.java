@@ -34,7 +34,7 @@ final class Solution {
             }
         }
         return charArray;
-        }
+    }
     /**
      * Main function.
      *
