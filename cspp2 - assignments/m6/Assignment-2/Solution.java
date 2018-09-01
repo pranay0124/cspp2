@@ -27,7 +27,7 @@ final class Solution {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
 
-                a[i][j] = 100*Math.round(a[i][j]/50);
+                a[i][j] = 100*Math.round(a[i][j]/100);
             }
         }
         return a;
