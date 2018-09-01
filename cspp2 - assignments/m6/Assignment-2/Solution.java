@@ -31,8 +31,9 @@ final class Solution {
                     a[i][j] = 100*Math.round(a[i][j]/50);
                 }
                 else {
-                    sum = 100*Math.round(a[i][j]/50);
-                    a[i][j] = sum/2;
+                    sum = a[i][j]/2;
+                    a[i][j] = 100*Math.round(sum/50);
+                    
                 }
             }
         }
