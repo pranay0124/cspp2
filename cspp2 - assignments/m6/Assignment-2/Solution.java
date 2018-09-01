@@ -33,9 +33,9 @@ final class Solution {
                 else {
                     sum = 100*Math.round(a[i][j]/50);
                     a[i][j] = sum/100;
-                    if (a[i][j] % 100 != 0) {
-                        a[i][j] = a[i][j] + 50;
-                    }
+                    // if (a[i][j] % 100 != 0) {
+                    //     a[i][j] = a[i][j] + 50;
+                    // }
                     
                 }
             }
