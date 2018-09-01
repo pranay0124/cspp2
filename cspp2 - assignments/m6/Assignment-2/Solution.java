@@ -27,13 +27,13 @@ final class Solution {
         int sum = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] > 100) {
+                if (a[i][j] < 100) {
                     a[i][j] = 100*Math.round(a[i][j]/50);
                 }
-                // else {
-                //     sum = 100*Math.round(a[i][j]/50);
-                //     a[i][j] = sum/2;
-                //}
+                else {
+                    sum = 100*Math.round(a[i][j]/50);
+                    a[i][j] = sum/2;
+                }
             }
         }
         return a;
