@@ -13,9 +13,11 @@ public final class Solution {
         //not used
     }
     /**
-     * Prints the odd composite numbers between 2 and n.
+     * Function.
      *
-     * @param      n     n value
+     * @param      n     { parameter_description }
+     *
+     * @return     True if composite, False otherwise.
      */
     static boolean isComposite(final int n) {
         for (int i = 2; i <= n - 1; i++) {
@@ -25,6 +27,11 @@ public final class Solution {
         }
         return false;
     }
+    /**
+     * Function.
+     *
+     * @param      n     { parameter_description }
+     */
     static void oddComposites(final int n) {
         // for (int i = 3; i < n; i++) {
         //     int count = 0;
@@ -40,7 +47,8 @@ public final class Solution {
         //         }
         //     }
         // }
-        for (int i = 3; i <= n; i += 2) {
+        final int three = 3; 
+        for (int i = three; i <= n; i += 2) {
             if (isComposite(i)) {
                 System.out.println(i);
             }
