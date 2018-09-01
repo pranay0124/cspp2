@@ -47,7 +47,7 @@ public final class Solution {
         //         }
         //     }
         // }
-        final int three = 3; 
+        final int three = 3;
         for (int i = three; i <= n; i += 2) {
             if (isComposite(i)) {
                 System.out.println(i);
@@ -65,4 +65,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
