@@ -211,7 +211,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (array[index] != 0) {
             System.out.println(array[index]);
@@ -266,9 +266,10 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < 10; i++) {
+        final int ten = 10;
+        for (int i = 0; i < ten; i++) {
             if (array[i] == item) {
                 return true;
             }
