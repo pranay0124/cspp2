@@ -160,9 +160,10 @@ public class List {
     public int get(int index) {
         // Replace the code below to write the code for get
         if (array[index] != 0) {
-            return array[index];
+            System.out.println(array[index]);
         }
-        return -1;
+        System.out.println(-1);
+        return 0;
     }
 
     /*
@@ -261,7 +262,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                l.get(Integer.parseInt(tokens[1]));
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
