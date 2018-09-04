@@ -289,9 +289,10 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < 10; i++) {
+        final int ten = 10;
+        for (int i = 0; i < ten; i++) {
             if (array[i] == item) {
                 return i;
             }
