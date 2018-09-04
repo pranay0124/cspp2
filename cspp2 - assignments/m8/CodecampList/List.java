@@ -98,9 +98,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        final int zero = 0;
-        array = new int[zero];
-        size = zero;
+        array = new int[10];
+        size = 0;
     }
 
     /*
@@ -174,13 +173,10 @@ public class List {
         //     for (int i= index; i< size; i++) {
         //         array[i] = array[i+1];
         // }
-        final int one = 1;
-        final int nine = 9;
-        final int ten = 10;
-        if (index <= nine) {
-            int[] sample = new int[ten];
-            for (int i = 0, j = 0; i < ten; i++, j++) {
-                if (i == index - one) {
+        if (index <= 9) {
+            int[] sample = new int[10];
+            for (int i = 0, j = 0; i < 10; i++, j++) {
+                if (i == index - 1) {
                     sample[j] = array[i];
                     i += 1;
                 } else {
@@ -214,8 +210,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        final int zero = 0;
-        if (array[index] != zero) {
+        if (array[index] != 0) {
             System.out.println(array[index]);
         }
         return -1;
@@ -270,8 +265,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        final int ten = 10;
-        for (int i = 0; i < ten; i++) {
+        for (int i = 0; i < 10; i++) {
             if (array[i] == item) {
                 return true;
             }
@@ -285,7 +279,7 @@ public class List {
      * or -1 if this list does not contain the element.
      */
     /**
-     * Searches for the first match and returns the index.
+     * Searches for the first match and returns the.
      *
      * @param      item  The item
      *
@@ -293,8 +287,7 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        final int ten = 10;
-        for (int i = 0; i < ten; i++) {
+        for (int i = 0; i < 10; i++) {
             if (array[i] == item) {
                 return i;
             }
