@@ -119,7 +119,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         array[size] = item;
         size += 1;
@@ -167,16 +167,18 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
 
         //     for (int i= index; i< size; i++) {
         //         array[i] = array[i+1];
         // }
-        if (index <= 9) {
-            int[] sample = new int[10];
-            for (int i = 0, j = 0; i < 10; i++, j++) {
+        final int nine = 9;
+        final int ten = 10;
+        if (index <= nine) {
+            int[] sample = new int[ten];
+            for (int i = 0, j = 0; i < ten; i++, j++) {
                 if (i == index - 1) {
                     sample[j] = array[i];
                     i += 1;
