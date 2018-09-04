@@ -162,8 +162,7 @@ public class List {
         if (array[index] != 0) {
             System.out.println(array[index]);
         }
-        System.out.println(-1);
-        return 0;
+        return -1;
     }
 
     /*
