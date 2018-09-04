@@ -1,7 +1,23 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 4th September,2018.
+ */
+/**
+ * Buffered Input Stream class.
+ */
 import java.io.BufferedInputStream;
+/**
+ * Scanner Class.
+ */
 import java.util.Scanner;
+/**
+ * Array class.
+ */
 import java.util.Arrays;
 
+/**
+ * Class List.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -129,6 +145,10 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+
+        //     for (int i= index; i< size; i++) {
+        //         array[i] = array[i+1];
+        // }
         if (index <= 9) {
             int[] sample = new int[10];
             for (int i = 0, j = 0; i < 10; i++, j++) {
@@ -224,7 +244,12 @@ public class List {
         }
         return -1;
     }
-
+    
+    /**
+     * Main Class.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
