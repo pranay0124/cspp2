@@ -174,13 +174,12 @@ public class List {
         //     for (int i= index; i< size; i++) {
         //         array[i] = array[i+1];
         // }
-        final int zero = 0;
         final int one = 1;
         final int nine = 9;
         final int ten = 10;
         if (index <= nine) {
             int[] sample = new int[ten];
-            for (int i = zero, j = zero; i < ten; i++, j++) {
+            for (int i = 0, j = 0; i < ten; i++, j++) {
                 if (i == index - one) {
                     sample[j] = array[i];
                     i += 1;
@@ -249,9 +248,8 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        final int zero = 0;
         int[] array2 = new int[size];
-        for (int i = zero; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             array2[i] = array[i];
         }
         return (Arrays.toString(array2)).replace(" ", "");
@@ -272,9 +270,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        final int zero = 0;
         final int ten = 10;
-        for (int i = zero; i < ten; i++) {
+        for (int i = 0; i < ten; i++) {
             if (array[i] == item) {
                 return true;
             }
@@ -296,9 +293,8 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        final int zero = 0;
         final int ten = 10;
-        for (int i = zero; i < ten; i++) {
+        for (int i = 0; i < ten; i++) {
             if (array[i] == item) {
                 return i;
             }
