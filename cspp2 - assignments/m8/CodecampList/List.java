@@ -46,6 +46,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * Creating an array.
+    */
     private int[] array;
 
     /*
@@ -71,11 +74,17 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    * Defining the size.
+    */
     private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * List Function.
      */
     public List() {
 
@@ -89,8 +98,9 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        array = new int[10];
-        size = 0;
+        final int zero = 0;
+        array = new int[zero];
+        size = zero;
     }
 
     /*
@@ -104,6 +114,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * Add Function.
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         array[size] = item;
@@ -116,6 +131,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * Size Function.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -142,6 +162,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * Remove Function.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -149,10 +174,14 @@ public class List {
         //     for (int i= index; i< size; i++) {
         //         array[i] = array[i+1];
         // }
-        if (index <= 9) {
-            int[] sample = new int[10];
-            for (int i = 0, j = 0; i < 10; i++, j++) {
-                if (i == index - 1) {
+        final int zero = 0;
+        final int one = 1;
+        final int nine = 9;
+        final int ten = 10;
+        if (index <= nine) {
+            int[] sample = new int[ten];
+            for (int i = zero, j = zero; i < ten; i++, j++) {
+                if (i == index - one) {
                     sample[j] = array[i];
                     i += 1;
                 } else {
@@ -177,9 +206,17 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * Get Function.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (array[index] != 0) {
+        final int zero = 0;
+        if (array[index] != zero) {
             System.out.println(array[index]);
         }
         return -1;
@@ -205,10 +242,16 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
+        final int zero = 0;
         int[] array2 = new int[size];
-        for (int i = 0; i < size; i++) {
+        for (int i = zero; i < size; i++) {
             array2[i] = array[i];
         }
         return (Arrays.toString(array2)).replace(" ", "");
@@ -220,9 +263,18 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * Returns True if it contains the element.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         // Replace the code below
-        for (int i = 0; i < 10; i++) {
+        final int zero = 0;
+        final int ten = 10;
+        for (int i = zero; i < ten; i++) {
             if (array[i] == item) {
                 return true;
             }
@@ -235,9 +287,18 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match and returns the index.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i = 0; i < 10; i++) {
+        final int zero = 0;
+        final int ten = 10;
+        for (int i = zero; i < ten; i++) {
             if (array[i] == item) {
                 return i;
             }
