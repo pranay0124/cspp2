@@ -1,3 +1,7 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 5th September, 2018.
+ */
 import java.util.Scanner;
 
 /*
@@ -17,6 +21,9 @@ import java.util.Scanner;
  *
  */
 
+/**
+ * Class for fibanocci.
+ */
 public class Fibonacci {
     /*
      * fib is a static method takes a argument n
@@ -25,7 +32,7 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    
+
     public static List fib(int n) {
         // todo - complete this method
         List l = new List(n);
@@ -42,7 +49,12 @@ public class Fibonacci {
         }
         return l;
     }
-
+    
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
