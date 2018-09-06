@@ -15,6 +15,12 @@ import java.util.Scanner;
  * Solution class.
  */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//Zero Parameter Constructor.
+	}
 
 	// private String[] list;
 	// private int size;
@@ -107,7 +113,7 @@ public class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// create an object of the list to invoke methods on it
 		StringList sl = new StringList();
 		StringListInterface l = (StringListInterface)sl; //Typecasting is done for StringListInterface
