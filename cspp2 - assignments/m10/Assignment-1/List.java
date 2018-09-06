@@ -366,8 +366,9 @@ public class List {
      */
     public void addAll(final int[] testlist) {
         // write the logic
-        for (int i = 0; i < testlist.length; i++)
+        for (int i = 0; i < testlist.length; i++) {
             add(testlist[i]);
+        }
     }
 
     /*
@@ -398,7 +399,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         // write the logic
         int cnt = 0;
         for (int i = 0; i < size; i++) {
@@ -414,7 +415,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -475,6 +476,7 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+            default:
             }
         }
     }
