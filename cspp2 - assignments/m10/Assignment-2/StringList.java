@@ -125,7 +125,6 @@ public class StringList implements StringListInterface{
             list[size++] = item;
         } catch (Exception e) {
             resize();
-            add(item);
         }  
     }
 
