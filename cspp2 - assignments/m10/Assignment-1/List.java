@@ -365,7 +365,7 @@ public class List {
     public void addAll(final int testlist[]) {
         // write the logic
         for (int i = 0; i < testlist.length; i++)
-            add(list[i]);
+            add(testlist[i]);
     }
 
     /*
