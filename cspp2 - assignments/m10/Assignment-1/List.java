@@ -362,9 +362,9 @@ public class List {
     /**
      * Adds a list of elements at once to the list.
      */
-    public void addAll(final int list[]) {
+    public void addAll(final int testlist[]) {
         // write the logic
-        for (int i = 0; i < list.length; i++)
+        for (int i = 0; i < testlist.length; i++)
             add(list[i]);
     }
 
