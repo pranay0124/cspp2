@@ -360,6 +360,7 @@ public class List {
      array to the end of list*/
     /**
      * Adds a list of elements at once to the list.
+     * @param List The list
      */
     public void addAll(final int list[]) {
         // write the logic
