@@ -1,94 +1,93 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Solution {
 
-	private String[] list;
-	private int size;
+	// private String[] list;
+	// private int size;
 
-	public void List() {
-		list = new String[10];
-		size = 0;
-	}
+	// public void List() {
+	// 	list = new String[10];
+	// 	size = 0;
+	// }
 
-	public void List(int capacity) {
-		size = 0;
-		list = new String[capacity];
-	}
+	// public void List(int capacity) {
+	// 	size = 0;
+	// 	list = new String[capacity];
+	// }
 
-	public void add(String item) {
-        try {
-        	list[size++] = item;
-        } catch (Exception e) {
-        	resize();
-        	add(item);
-        }
+	// public void add(String item) {
+ //        try {
+ //        	list[size++] = item;
+ //        } catch (Exception e) {
+ //        	resize();
+ //        	add(item);
+ //        }
         
-	}
+	// }
 
-	public void resize() {
-        list = Arrays.copyOf(list, 2 * size);
-	}
+	// public void resize() {
+ //        list = Arrays.copyOf(list, 2 * size);
+	// }
 
-	public void addall(int List[]) {
-		for (int i = 0; i<list.length; i++) {
-			add(list[i]);
-		}
-	}
+	// public void addall(int List[]) {
+	// 	for (int i = 0; i<list.length; i++) {
+	// 		add(list[i]);
+	// 	}
+	// }
 
-	public int size() {
-		return size;
-	}
+	// public int size() {
+	// 	return size;
+	// }
 
-	public String toString() {
-		if (size == 0) 
-			return "[]";
-		String str = "[";
-		int i = 0;
-		for (i = 0; i< size-1; i++) {
-		   	str = str + list[i] + ",";
-		}
-		str = str + list[i] + "]";
-		return str;
-	}
+	// public String toString() {
+	// 	if (size == 0) 
+	// 		return "[]";
+	// 	String str = "[";
+	// 	int i = 0;
+	// 	for (i = 0; i< size-1; i++) {
+	// 	   	str = str + list[i] + ",";
+	// 	}
+	// 	str = str + list[i] + "]";
+	// 	return str;
+	// }
 
-	public void remove(int index) {
-		if (index >= 0 && index < size) {
-			for (int i=index;i<size-1;i++) {
-				list[i] = list[i+1];
-			}
-			size--;
-		} else{
-			System.out.println("Invalid Position Exception");
-		}
-	}
+	// public void remove(int index) {
+	// 	if (index >= 0 && index < size) {
+	// 		for (int i=index;i<size-1;i++) {
+	// 			list[i] = list[i+1];
+	// 		}
+	// 		size--;
+	// 	} else{
+	// 		System.out.println("Invalid Position Exception");
+	// 	}
+	// }
 
-	public int indexOf(String item) {
-    	for(int i = 0; i<size;i++) {
-    		if(item == list[i]) {
-    			return i;
-    		}
-    	}
-    	return -1;
-	}
+	// public int indexOf(String item) {
+ //    	for(int i = 0; i<size;i++) {
+ //    		if(item == list[i]) {
+ //    			return i;
+ //    		}
+ //    	}
+ //    	return -1;
+	// }
 
-	public String get(int index) {
-		if (index<0 || index>= size) {
-			return "-1";
-		} else {
-			return list[index];
-		}
-	}
+	// public String get(int index) {
+	// 	if (index<0 || index>= size) {
+	// 		return "-1";
+	// 	} else {
+	// 		return list[index];
+	// 	}
+	// }
 
-	public boolean contains(String item) {
-		for(int i = 0; i<size;i++) {
-    		if(item == list[i]) {
-    			return true;
-    		}
-    	}
-    	return false;
-	}
+	// public boolean contains(String item) {
+	// 	for(int i = 0; i<size;i++) {
+ //    		if(item == list[i]) {
+ //    			return true;
+ //    		}
+ //    	}
+ //    	return false;
+	// }
 
 	public static void main(String[] args) {
         // create an object of the list to invoke methods on it
