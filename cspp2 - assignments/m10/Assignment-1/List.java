@@ -120,7 +120,9 @@ public class List {
     }
 
     private void resize() {
-        list = Arrays.copyOf(list, 2 * list.length);
+        int[] nlist = Arrays.copyOf(list, 2 * list.length);
+        System.out.println(nlist.length);
+        list = nlist;
     }
     /*
      *
