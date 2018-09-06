@@ -1,6 +1,19 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 6th September,2018.
+ */
+/**
+ * Buffered Input Stream class.
+ */
 import java.io.BufferedInputStream;
+/**
+ * Scanner class.
+ */
 import java.util.Scanner;
 
+/**
+ * Solution class.
+ */
 public class Solution {
 
 	// private String[] list;
@@ -17,17 +30,17 @@ public class Solution {
 	// }
 
 	// public void add(String item) {
- //        try {
- //        	list[size++] = item;
- //        } catch (Exception e) {
- //        	resize();
- //        	add(item);
- //        }
-        
+//        try {
+//        	list[size++] = item;
+//        } catch (Exception e) {
+//        	resize();
+//        	add(item);
+//        }
+
 	// }
 
 	// public void resize() {
- //        list = Arrays.copyOf(list, 2 * size);
+//        list = Arrays.copyOf(list, 2 * size);
 	// }
 
 	// public void addall(int List[]) {
@@ -41,7 +54,7 @@ public class Solution {
 	// }
 
 	// public String toString() {
-	// 	if (size == 0) 
+	// 	if (size == 0)
 	// 		return "[]";
 	// 	String str = "[";
 	// 	int i = 0;
@@ -64,12 +77,12 @@ public class Solution {
 	// }
 
 	// public int indexOf(String item) {
- //    	for(int i = 0; i<size;i++) {
- //    		if(item == list[i]) {
- //    			return i;
- //    		}
- //    	}
- //    	return -1;
+//    	for(int i = 0; i<size;i++) {
+//    		if(item == list[i]) {
+//    			return i;
+//    		}
+//    	}
+//    	return -1;
 	// }
 
 	// public String get(int index) {
@@ -82,62 +95,67 @@ public class Solution {
 
 	// public boolean contains(String item) {
 	// 	for(int i = 0; i<size;i++) {
- //    		if(item == list[i]) {
- //    			return true;
- //    		}
- //    	}
- //    	return false;
+//    		if(item == list[i]) {
+//    			return true;
+//    		}
+//    	}
+//    	return false;
 	// }
 
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
-        // create an object of the list to invoke methods on it
-        StringList sl = new StringList();
-        StringListInterface l=(StringListInterface)sl;//Typecasting is done for StringListInterface
-        // code to read the test cases input file
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
-        // check if there is one more line to process
-        while (stdin.hasNext()) {
-            // read the line
-            String line = stdin.nextLine();
-            // split the line using space
-            String[] tokens = line.split(" ");
-            // based on the list operation invoke the corresponding method
-            switch (tokens[0]) {
-                case "add":
-	                l.add(tokens[1]);
-                break;
-                case "addAll":
-                if(tokens.length==2){
-                String[] t1 = tokens[1].split(",");
-                l.addAll(t1);
-                }
-                break;
-                case "size":
-                // invoke size method and print the list size
-                // BTW, list size is not the array size
-                // it is the number of items in the list
-                System.out.println(l.size());
-                break;
-                case "print":
-                // print the list (implement toString in StringList class
-                //for this to work)
-                // expected format is [item-1,item-2,...,item-n]
-                // review the output testcase file
-                System.out.println(l);
-                break;
-                case "remove":
-                l.remove(Integer.parseInt(tokens[1]));
-                break;
-                case "indexOf":
-                System.out.println(l.indexOf(tokens[1]));
-                break;
-                case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
-                break;
-                case "contains":
-                System.out.println(l.contains(tokens[1]));
-                break;
-            }
-        }
+		// create an object of the list to invoke methods on it
+		StringList sl = new StringList();
+		StringListInterface l = (StringListInterface)sl; //Typecasting is done for StringListInterface
+		// code to read the test cases input file
+		Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+		// check if there is one more line to process
+		while (stdin.hasNext()) {
+			// read the line
+			String line = stdin.nextLine();
+			// split the line using space
+			String[] tokens = line.split(" ");
+			// based on the list operation invoke the corresponding method
+			switch (tokens[0]) {
+			case "add":
+				l.add(tokens[1]);
+				break;
+			case "addAll":
+				if (tokens.length == 2) {
+					String[] t1 = tokens[1].split(",");
+					l.addAll(t1);
+				}
+				break;
+			case "size":
+				// invoke size method and print the list size
+				// BTW, list size is not the array size
+				// it is the number of items in the list
+				System.out.println(l.size());
+				break;
+			case "print":
+				// print the list (implement toString in StringList class
+				//for this to work)
+				// expected format is [item-1,item-2,...,item-n]
+				// review the output testcase file
+				System.out.println(l);
+				break;
+			case "remove":
+				l.remove(Integer.parseInt(tokens[1]));
+				break;
+			case "indexOf":
+				System.out.println(l.indexOf(tokens[1]));
+				break;
+			case "get":
+				System.out.println(l.get(Integer.parseInt(tokens[1])));
+				break;
+			case "contains":
+				System.out.println(l.contains(tokens[1]));
+				break;
+			}
+		}
 	}
 }
