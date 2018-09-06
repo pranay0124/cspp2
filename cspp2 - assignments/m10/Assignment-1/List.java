@@ -361,10 +361,10 @@ public class List {
 
     /**
      * add all function.
-     * 
+     *
      * @param testlist The testlist
      */
-    public void addAll(final int testlist[]) {
+    public void addAll(final int[] testlist) {
         // write the logic
         for (int i = 0; i < testlist.length; i++)
             add(testlist[i]);
