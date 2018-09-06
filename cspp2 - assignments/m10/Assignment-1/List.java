@@ -112,10 +112,11 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        if (size == list.length) {
+        try {
+            list[size++] = item;
+        } catch(Exception e) {
             resize();
         }
-        list[size++] = item;   
     }
 
     private void resize() {
