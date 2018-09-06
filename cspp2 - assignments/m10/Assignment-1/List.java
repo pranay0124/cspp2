@@ -358,9 +358,9 @@ public class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
+    
     /**
      * Adds a list of elements at once to the list.
-     * @param List The list
      */
     public void addAll(final int list[]) {
         // write the logic
