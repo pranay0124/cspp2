@@ -21,6 +21,10 @@ class Student {
 		Student that = (Student) other;
 		return this.getName().equals(that.getName());
 	}
+	@Override
+	public int hashCode() {
+		return 0;
+	}
 
 	public String toString() {
 		return this.name;
