@@ -114,15 +114,15 @@ public class List {
         //Inserts the specified element at the end of the zelist.
         try {
             list[size++] = item;
-        } catch(Exception e) {
+        } catch(Exception  e) {
             resize();
+
+            add(item);
         }
     }
 
     private void resize() {
-        int[] nlist = Arrays.copyOf(list, 2 * list.length);
-        System.out.println(nlist.length);
-        list = nlist;
+        list = Arrays.copyOf(list, 2 * list.length);
     }
     /*
      *
@@ -277,7 +277,7 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(final int items[]) {
+    public void addAll(final int list[]) {
         // write the logic 
         for(int i = 0; i < list.length; i++)
             add(list[i]);
