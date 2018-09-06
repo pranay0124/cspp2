@@ -361,6 +361,8 @@ public class List {
 
     /**
      * add all function.
+     * 
+     * @param testlist The testlist
      */
     public void addAll(final int testlist[]) {
         // write the logic
