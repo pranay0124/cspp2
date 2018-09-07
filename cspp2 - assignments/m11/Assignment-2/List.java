@@ -158,7 +158,12 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        return indexOf(item) == -1;
+        for (int i = 0; i < size; i++) {
+            if (item.equals(list[i])) {
+                return true;
+            }
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence
@@ -241,10 +246,8 @@ public class List<E> {
     public boolean equals(List<E> listdata) {
         
             if (Arrays.equals(list , listdata.list)) {
-                //System.out.println(list[i] + " see me" + listdata.list[i]);
                 return true;
             }
-        
         return false;
         // return this.toString().equals(listdata.toString());
     }
