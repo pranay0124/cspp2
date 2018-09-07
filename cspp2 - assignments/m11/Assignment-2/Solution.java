@@ -14,13 +14,14 @@ class Student {
      * Attribute Name.
      */
     private String name;
-    
+
     /**
      * Method Student.
      *
      * @param      name  The name
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
+    Student(String name) {
+    //A constructor used to initialize the instance variables
         this.name = name;
     }
     
