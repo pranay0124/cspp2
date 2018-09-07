@@ -239,20 +239,13 @@ public class List<E> {
       i.e a List object is exactly matching with the given list or not.
      */
     public boolean equals(List<E> listdata) {
-        if (size() != listdata.size()) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            // if (alist.contains(this.list[i])) {
-            //     return false;
-            // }
-            //System.out.println(list[i] + " see me" + listdata.list[i]);
-            if (!Arrays.equals(list , listdata.list)) {
+        
+            if (Arrays.equals(list , listdata.list)) {
                 //System.out.println(list[i] + " see me" + listdata.list[i]);
-                return false;
+                return true;
             }
-        }
-        return true;
+        
+        return false;
         // return this.toString().equals(listdata.toString());
     }
 
