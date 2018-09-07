@@ -364,10 +364,10 @@ public final class List {
             //     return false;
             // }
             if (list[i] == alist.list[i]) {
-                return false;
+                return true;
             } 
         }
-        return true;
+        return false;
     }
     /*
     * Removes all the elements from list
