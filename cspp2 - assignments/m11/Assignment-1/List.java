@@ -120,7 +120,8 @@ public final class List {
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         try {
-            list[size++] = item;
+            list[size] = item;
+            size++;
         } catch (Exception  e) {
             resize();
             add(item);
@@ -302,10 +303,7 @@ public final class List {
         for (int i = 0; i < newArray.length; i++) {
             int cnt = count(newArray[i]);
             for (int j = 0; j < cnt; j++) {
-                if (newArray[i] == list[j]) {
-                    remove(indexOf(list[j]));
-                    size--;
-                }
+                remove(indexOf(newArray[i]));
             }
         }
 
@@ -393,6 +391,7 @@ public final class List {
         final int ten = 10;
         list = new int[ten];
         size = 0;
+        
 
     }
 
