@@ -46,7 +46,7 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
+
     /**
      * List Declaration.
      */
@@ -74,7 +74,7 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
+
     /**
      * Size declaration.
      */
@@ -98,7 +98,8 @@ public final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
 
     }
@@ -116,7 +117,7 @@ public final class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         try {
             list[size++] = item;
@@ -168,7 +169,7 @@ public final class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -197,7 +198,7 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
             return -1;
@@ -249,7 +250,7 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
     }
@@ -264,7 +265,7 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
