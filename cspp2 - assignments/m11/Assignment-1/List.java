@@ -312,7 +312,14 @@ public final class List {
         //}
 
     }
-    
+
+    /**
+     * Counts how many times the element is repeated.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
         // write the logic
         int cnt = 0;
@@ -374,7 +381,7 @@ public final class List {
             // }
             if (list[i] != alist.list[i]) {
                 return false;
-            } 
+            }
         }
         return true;
     }
@@ -391,7 +398,7 @@ public final class List {
         final int ten = 10;
         list = new int[ten];
         size = 0;
-        
+
 
     }
 
