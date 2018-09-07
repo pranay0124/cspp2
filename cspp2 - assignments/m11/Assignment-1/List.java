@@ -299,21 +299,32 @@ public final class List {
       */
     public void removeAll(final int[] newArray) {
         // write the logic
-        // int newsize = size;
-        // for (int i = 0; i < newArray.length; i++) {
-        //     for (int j = 0; j < newsize; j++) {
-        //         if (newArray[i] == list[j]) {
-        //             remove(indexOf(newArray[i]));
-        //             size--;
-        //         }
-        //     }
-        // }
         for (int i = 0; i < newArray.length; i++) {
-            remove(indexOf(newArray[i]));
+            int cnt = count(newArray[i]);
+            for (int j = 0; j < cnt; j++) {
+                if (newArray[i] == list[j]) {
+                    remove(indexOf(list[j]));
+                    size--;
+                }
+            }
         }
 
-    }
+        // for (int i = 0; i < newArray.length; i++) {
+        //     remove(indexOf(newArray[i]));
+        //}
 
+    }
+    
+    public int count(final int item) {
+        // write the logic
+        int cnt = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                cnt = cnt + 1;
+            }
+        }
+        return cnt;
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -363,11 +374,11 @@ public final class List {
             // if (alist.contains(this.list[i])) {
             //     return false;
             // }
-            if (list[i] == alist.list[i]) {
-                return true;
+            if (list[i] != alist.list[i]) {
+                return false;
             } 
         }
-        return false;
+        return true;
     }
     /*
     * Removes all the elements from list
