@@ -246,7 +246,7 @@ public class List {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        for (int i = start; i < end - 1; i++) {
+        for (int i = start; i < end; i++) {
             l1.add(list[i]);
 
         }
