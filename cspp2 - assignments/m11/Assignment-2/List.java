@@ -246,9 +246,9 @@ public class List<E> {
             // if (alist.contains(this.list[i])) {
             //     return false;
             // }
-            System.out.println(list[i] + " see me" + listdata.list[i]);
-            if (list[i] != listdata.list[i]) {
-                System.out.println(list[i] + " see me" + listdata.list[i]);
+            //System.out.println(list[i] + " see me" + listdata.list[i]);
+            if (!Arrays.equals(list , listdata.list)) {
+                //System.out.println(list[i] + " see me" + listdata.list[i]);
                 return false;
             }
         }
