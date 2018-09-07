@@ -376,17 +376,18 @@ public final class List {
      */
     public void clear() {
         // write the logic for clear.
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
 
     }
-    
+
     /**
      * Main Function.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
