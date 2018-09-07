@@ -348,9 +348,9 @@ public final class List {
     exactly matching with the given list or not.
     */
     /**
-     * Returns true is two lists are equal.
+     * Returns true if two lists are equal.
      *
-     * @param      list  The list
+     * @param      alist  The alist
      *
      * @return     { description_of_the_return_value }
      */
