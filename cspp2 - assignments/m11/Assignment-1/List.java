@@ -126,7 +126,7 @@ public final class List {
             add(item);
         }
     }
-    
+
     /**
      * Resize Function.
      */
@@ -282,7 +282,7 @@ public final class List {
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
@@ -297,7 +297,7 @@ public final class List {
       *
       * @param      newArray  The new array
       */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         // write the logic
         // int newsize = size;
         // for (int i = 0; i < newArray.length; i++) {
@@ -329,10 +329,10 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         // write the logic for subList
         List l1 = new List();
-        if (start < 0 || end < 0 || start > end ) {
+        if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
@@ -354,13 +354,13 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list) {
+    public boolean equals(final List alist) {
         // Replace the code below
-        if (size() != list.size()) {
+        if (size() != alist.size()) {
             return false;
         }
         for (int i = 0; i < size; i++) {
-            if (list.contains(this.list[i])) {
+            if (alist.contains(this.list[i])) {
                 return false;
             }
         }
