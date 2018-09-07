@@ -246,7 +246,8 @@ public class List<E> {
             // if (alist.contains(this.list[i])) {
             //     return false;
             // }
-            if (list[i] == listdata.list[i]) {
+            if (list[i] != listdata.list[i]) {
+                System.out.println(list[i]);
                 return false;
             }
         }
