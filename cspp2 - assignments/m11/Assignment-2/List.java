@@ -248,7 +248,7 @@ public class List<E> {
             // }
             System.out.println(list[i] + " see me" + listdata.list[i]);
             if (list[i] != listdata.list[i]) {
-                //System.out.println(list[i] + " see me" + listdata.list[i]);
+                System.out.println(list[i] + " see me" + listdata.list[i]);
                 return false;
             }
         }
