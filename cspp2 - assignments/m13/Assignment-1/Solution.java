@@ -9,7 +9,14 @@ import java.util.Arrays;
 class Set {
 	//your code goes here...
 	//Good luck :-)
+	
+	/**
+	 * Set array.
+	 */
 	private int[] set;
+	/**
+	 * Size variable.
+	 */
 	private int size;
     /**
      * Constructor.
