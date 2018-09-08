@@ -30,7 +30,7 @@ class Set {
 		return false;
 	}
 
-	public String StringtoString() {
+	public String print() {
 		if (size == 0) {
 			return "{}";
 		}
