@@ -31,6 +31,7 @@ class Set {
 	}
 
 	public String print() {
+		System.out.println("see me ");
 		if (size == 0) {
 			return "{}";
 		}
