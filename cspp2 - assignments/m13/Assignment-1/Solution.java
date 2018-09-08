@@ -31,28 +31,17 @@ class Set {
 	}
     
     public String print() {
-    	if (size == 0) {
-    		return "{}";
-    	}
-    	String str = "{";
-    	int i = 0;
-    	for (i = 0; i< size;i++) {
-    		str = str + set + ",";
-    	}
-    	str = str + set + "}";
-    	return str; 
-    }
-	// public String print() {
-	// 	if (size == 0) {
-	// 		return "{}";
-	// 	}
-	// 	// String str = "{";
-	// 	// int i = 0;
-	// 	// for (i = 0; i < size - 1; i++) {
-	// 	// 	str = str + set[i] + ",";
-	// 	// }
-	// 	// str = str + set[i] + "}";
-	// 	// return str;
+		if (size == 0) {
+			return "{}";
+		}
+		String str = "{";
+		int i = 0;
+		for (i = 0; i < size - 1; i++) {
+			str = str + set[i] + ",";
+		}
+		str = str + set[i] + "}";
+		return str;
+	}
 	// 	String[] str = new String[size];
 	// 	for (int i = 0; i < size; i++) {
  //            str[i] = Integer.toString(set[i]);
