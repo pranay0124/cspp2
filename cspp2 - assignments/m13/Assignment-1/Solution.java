@@ -21,8 +21,9 @@ class Set {
     /**
      * Constructor.
      */
-    public Set() {
-        set = new int[10];
+    Set() {
+        final int ten = 10;
+        set = new int[ten];
         size = 0;
     }
 
@@ -138,7 +139,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(Set set1) {
+    public Set intersection(final Set set1) {
         Set set2 = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < set1.size; j++) {
@@ -157,7 +158,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(int[] arr) {
+    public Set retainAll(final int[] arr) {
         //       Set set2 = new Set();
         // for (int i = 0; i < size; i++) {
         //           for (int j = 0; j < arr.length; j++) {
