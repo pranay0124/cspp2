@@ -31,7 +31,6 @@ class Set {
 	}
 
 	public String print() {
-		System.out.println("see me ");
 		if (size == 0) {
 			return "{}";
 		}
@@ -166,6 +165,7 @@ public final class Solution {
 				System.out.println(s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
+			    System.out.println("see me");
 				System.out.println(s);
 				break;
 			case "add":
