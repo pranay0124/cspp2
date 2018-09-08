@@ -95,15 +95,18 @@ class Set {
 	}
     
 	public Set retainAll(int[] arr) {
-        Set set2 = new Set();
-		for (int i = 0; i < size; i++) {
-            for (int j = 0; j < arr.length; j++) {
-				if (set[i] == arr[j]) {
-					set2.add(set[i]);
-				}
-            }
-		}
-		return set2;
+  //       Set set2 = new Set();
+		// for (int i = 0; i < size; i++) {
+  //           for (int j = 0; j < arr.length; j++) {
+		// 		if (set[i] == arr[j]) {
+		// 			set2.add(set[i]);
+		// 		}
+  //           }
+		// }
+		// return set2;
+        Set set1 = new Set();
+        set1.add(arr);
+        return intersection(set1);
 	}
 
 	// public void cartesianProduct(int set) {
@@ -165,7 +168,6 @@ public final class Solution {
 				System.out.println(s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
-			    System.out.println("see me");
 				System.out.println(s);
 				break;
 			case "add":
