@@ -11,16 +11,30 @@ class Set {
 	//Good luck :-)
 	private int[] set;
 	private int size;
-
+    /**
+     * Constructor.
+     */
 	public Set() {
 		set = new int[10];
 		size = 0;
 	}
-
+    
+    /**
+     * Size Function.
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public int size() {
 		return size;
 	}
-
+    
+    /**
+     * Function to check the element is present or not.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (item == set[i]) {
@@ -30,6 +44,11 @@ class Set {
 		return false;
 	}
     
+    /**
+     * print function.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String print() {
 		if (size == 0) {
 			return "{}";
@@ -48,7 +67,12 @@ class Set {
  //        }
  //        return Arrays.toString(str).replaceAll(" ", "");
 	// }
-
+    
+    /**
+     * Add Function.
+     *
+     * @param      item  The item
+     */
 	public void add(final int item) {
 		try {
 			set[size] = item;
@@ -59,6 +83,12 @@ class Set {
 			
 		}
 	}
+
+	/**
+	 * Add All function.
+	 *
+	 * @param      newArray  The new array
+	 */
 	public void add(final int[] newArray) {
 		// write the logic
 		for (int i = 0; i < newArray.length; i++) {
@@ -71,10 +101,21 @@ class Set {
 			}
 		}
 	}
+
+	/**
+	 * Resize function.
+	 */
 	public void resize() {
 		set = Arrays.copyOf(set, 2 * set.length);
 	}
     
+    /**
+     * Get function.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
@@ -82,7 +123,14 @@ class Set {
             return set[index];
         }
     }
-
+    
+    /**
+     * Intersection function.
+     *
+     * @param      set1  The set 1
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public Set intersection(Set set1) {
         Set set2 = new Set();
 		for (int i = 0; i < size; i++) {
@@ -95,6 +143,13 @@ class Set {
         return set2;
 	}
     
+    /**
+     * Retain All function.
+     *
+     * @param      arr   The arr
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public Set retainAll(int[] arr) {
   //       Set set2 = new Set();
 		// for (int i = 0; i < size; i++) {
