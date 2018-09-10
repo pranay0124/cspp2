@@ -21,8 +21,11 @@ class Set {
         setarr = new int[ten];
         size = 0;
     }
+    
     /**
-     * { function_description }.
+     * Get Function.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int[] get() {
         return setarr;
