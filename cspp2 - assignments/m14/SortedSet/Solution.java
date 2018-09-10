@@ -259,7 +259,7 @@ public final class Solution {
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
-                    System.out.println("see me" + Arrays.toString(intArray));
+                    //System.out.println("see me" + Arrays.toString(intArray));
                     s.add(intArray);
                 }
                 break;
