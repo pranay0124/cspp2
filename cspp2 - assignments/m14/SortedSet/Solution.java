@@ -68,16 +68,21 @@ class Set {
         }
     }
     public void sort(final int[] items) {
-        for(int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (items[j] > items[j+1]) {
+        int[] newsetarr = new int[size];
+        for (int i = 0; i < size; i++) {
+            newsetarr[i] = items[i];
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size-1; j++) {
+                if (newsetarr[j] > newsetarr[j + 1]) {
                     int temp = 0;
-                    temp = items[j];
-                    items[j] = items[j+1];
-                    items[j+1] = temp;
+                    temp = newsetarr[j];
+                    newsetarr[j] = newsetarr[j + 1];
+                    newsetarr[j + 1] = temp;
                 }
             }
         }
+        //System.out.println(Arrays.toString(newsetarr));
     }
     /**
      * { To add an item }.
@@ -102,7 +107,6 @@ class Set {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
-        sort(items);
     }
     /**
      * { To return intersection }.
@@ -158,6 +162,27 @@ class Set {
             }
         }
         return cartarr;
+    }
+    public void subSet(int fromElement, int toElement) {
+        sort(setarr);
+        Set newsetarr = new Set();
+        for (int i = 0; i < size; i++) {
+            if (setarr[i] >= fromElement && setarr[i] < toElement) {
+                newsetarr.add(setarr[i]);
+            }
+        }
+        System.out.println(newsetarr);
+    }
+
+    public void headSet(int toElement) {
+        sort(setarr);
+        Set newsetarr = new Set();
+        for (int i = 0; i < size; i++) {
+            if (setarr[i] < toElement) {
+                newsetarr.add(setarr[i]);
+            }
+        }
+        System.out.println(newsetarr);
     }
 }
 /**
@@ -249,6 +274,17 @@ public final class Solution {
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
+            case "subSet":
+                int start = Integer.parseInt(tokens[1]);
+                int end = Integer.parseInt(tokens[2]);
+                if (start > end) {
+                    System.out.println("Invalid Arguments to Subset Exception");
+                } else {
+                    s.subSet(start, end);
+                }
+            case "headSet":
+                int last = Integer.parseInt(tokens[1]);
+                s.headSet(last);
             default:
                 break;
             }
