@@ -69,13 +69,18 @@ class Set {
             return str;
         }
     }
+    /**
+     * Sort function.
+     *
+     * @param      items  The items
+     */
     public void sort(final int[] items) {
         int[] newsetarr = new int[size];
         for (int i = 0; i < size; i++) {
             newsetarr[i] = items[i];
         }
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size-1; j++) {
+            for (int j = 0; j < size - 1; j++) {
                 if (newsetarr[j] > newsetarr[j + 1]) {
                     int temp = 0;
                     temp = newsetarr[j];
@@ -194,7 +199,7 @@ class SortedSet extends Set {
     }
 
     int last() {
-        if(size <= 0) {
+        if (size <= 0) {
             System.out.println("Set Empty Exception");
             return -1;
         }
@@ -207,7 +212,7 @@ class SortedSet extends Set {
     }
 }
 
-    
+
 /**
  * Solution class for code-eval.
  */
