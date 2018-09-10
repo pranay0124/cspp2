@@ -163,7 +163,7 @@ class Set {
         }
         return cartarr;
     }
-    public void subSet(int fromElement, int toElement) {
+    public Set subSet(int fromElement, int toElement) {
         sort(setarr);
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
@@ -171,7 +171,7 @@ class Set {
                 newsetarr.add(setarr[i]);
             }
         }
-        System.out.println(newsetarr);
+        return newsetarr;
     }
 
     public Set headSet(int toElement) {
