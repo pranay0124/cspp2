@@ -168,7 +168,6 @@ class Set {
         return cartarr;
     }
     public Set subSet(int fromElement, int toElement) {
-        sort(setarr);
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
             if (setarr[i] >= fromElement && setarr[i] < toElement) {
@@ -296,7 +295,9 @@ public final class Solution {
                 if (intArray[0] > intArray[1]) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 } else {
-                    s.subSet(intArray[0], intArray[1]);
+                    Set sa = new Set();
+                    sa = s.subSet(intArray[0], intArray[1]);
+                    System.out.println(sa);
                 }
                 break;
             case "headSet":
