@@ -180,6 +180,14 @@ class Set {
  * Class for sorted set.
  */
 class SortedSet extends Set {
+    /**
+     * SubSet Function.
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set subSet(final int fromElement, final int toElement) {
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
@@ -190,6 +198,13 @@ class SortedSet extends Set {
         return newsetarr;
     }
 
+    /**
+     * HeadSet Function.
+     *
+     * @param      toElement  To element
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set headSet(final int toElement) {
         sort(setarr);
         Set newsetarr = new Set();
@@ -200,7 +215,12 @@ class SortedSet extends Set {
         }
         return newsetarr;
     }
-
+    
+    /**
+     * Last Function.
+     *
+     * @return     { description_of_the_return_value }
+     */
     int last() {
         if (size <= 0) {
             System.out.println("Set Empty Exception");
