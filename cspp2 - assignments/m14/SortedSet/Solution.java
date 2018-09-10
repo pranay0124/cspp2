@@ -176,6 +176,9 @@ class Set {
     }
 }
 
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
     public Set subSet(int fromElement, int toElement) {
         Set newsetarr = new Set();
