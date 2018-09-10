@@ -8,11 +8,11 @@ class Set {
     /**
      * { It is of int type }.
      */
-    int[] setarr;
+    private int[] setarr;
     /**
      * { It is of int type }.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      */
@@ -20,6 +20,12 @@ class Set {
         final int ten = 10;
         setarr = new int[ten];
         size = 0;
+    }
+    /**
+     * { function_description }.
+     */
+    public int[] get() {
+        return setarr;
     }
     /**
      * { To resize }.
@@ -190,9 +196,9 @@ class SortedSet extends Set {
      */
     public Set subSet(final int fromElement, final int toElement) {
         Set newsetarr = new Set();
-        for (int i = 0; i < size; i++) {
-            if (setarr[i] >= fromElement && setarr[i] < toElement) {
-                newsetarr.add(setarr[i]);
+        for (int i = 0; i < size(); i++) {
+            if (super.get()[i] >= fromElement && super.get()[i] < toElement) {
+                newsetarr.add(super.get()[i]);
             }
         }
         return newsetarr;
@@ -206,11 +212,11 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     public Set headSet(final int toElement) {
-        sort(setarr);
+        sort(super.get());
         Set newsetarr = new Set();
-        for (int i = 0; i < size; i++) {
-            if (setarr[i] < toElement) {
-                newsetarr.add(setarr[i]);
+        for (int i = 0; i < size(); i++) {
+            if (super.get()[i] < toElement) {
+                newsetarr.add(super.get()[i]);
             }
         }
         return newsetarr;
@@ -222,13 +228,13 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     int last() {
-        if (size <= 0) {
+        if (size() <= 0) {
             System.out.println("Set Empty Exception");
             return -1;
         }
-        sort(setarr);
-        int s = size - 1;
-        return setarr[s];
+        sort(super.get());
+        int s = size() - 1;
+        return super.get()[s];
         // Arrays.sort(getSet(), 0, size());
         // int s = size() - 1;
         // return getSet()[s];
