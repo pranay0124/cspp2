@@ -174,7 +174,7 @@ class Set {
         System.out.println(newsetarr);
     }
 
-    public void headSet(int toElement) {
+    public Set headSet(int toElement) {
         sort(setarr);
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
@@ -182,7 +182,20 @@ class Set {
                 newsetarr.add(setarr[i]);
             }
         }
-        System.out.println(newsetarr);
+        return newsetarr;
+    }
+
+    int last() {
+        if(size <= 0) {
+            System.out.println("Set Empty Exception");
+            return -1;
+        }
+        sort(setarr);
+        int s = size - 1;
+        return setarr[s];
+        // Arrays.sort(getSet(), 0, size());
+        // int s = size() - 1;
+        // return getSet()[s];
     }
 }
 /**
@@ -275,16 +288,26 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-                int start = Integer.parseInt(tokens[1]);
-                int end = Integer.parseInt(tokens[2]);
-                if (start > end) {
+
+                String[] strArray = tokens[1].split(",");
+                intArray = new int[2];
+                intArray[0] = Integer.parseInt(strArray[0]);
+                intArray[1] = Integer.parseInt(strArray[1]);
+                if (intArray[0] > intArray[1]) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 } else {
-                    s.subSet(start, end);
+                    s.subSet(intArray[0], intArray[1]);
                 }
+                break;
             case "headSet":
-                int last = Integer.parseInt(tokens[1]);
-                s.headSet(last);
+                String[] strArray1 = tokens[1].split(",");
+                intArray = new int[1];
+                intArray[0] = Integer.parseInt(strArray1[0]);
+                System.out.println(s.headSet(intArray[0]));
+                break;
+            case "last":
+                System.out.println(s.last());
+                break;
             default:
                 break;
             }
