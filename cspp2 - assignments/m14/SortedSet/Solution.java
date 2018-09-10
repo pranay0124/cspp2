@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * Class for set.
+ */
 class Set {
     /**
      * { It is of int type }.
