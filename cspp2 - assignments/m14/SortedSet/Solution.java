@@ -21,7 +21,7 @@ class Set {
         setarr = new int[ten];
         size = 0;
     }
-    
+
     /**
      * Get Function.
      *
@@ -224,7 +224,7 @@ class SortedSet extends Set {
         }
         return newsetarr;
     }
-    
+
     /**
      * Last Function.
      *
