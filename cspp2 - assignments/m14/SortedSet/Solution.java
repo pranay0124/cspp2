@@ -180,7 +180,7 @@ class Set {
  * Class for sorted set.
  */
 class SortedSet extends Set {
-    public Set subSet(int fromElement, int toElement) {
+    public Set subSet(final int fromElement, final int toElement) {
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
             if (setarr[i] >= fromElement && setarr[i] < toElement) {
@@ -190,7 +190,7 @@ class SortedSet extends Set {
         return newsetarr;
     }
 
-    public Set headSet(int toElement) {
+    public Set headSet(final int toElement) {
         sort(setarr);
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
@@ -300,7 +300,8 @@ public final class Solution {
             //     s.add(intArray);
             //     intArray = intArray(tokens[2]);
             //     t.add(intArray);
-            //     System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+            //     System.out.println(Arrays.deepToString
+            //              (s.cartesianProduct(t)));
             //     break;
             case "subSet":
                 String[] strArray = tokens[1].split(",");
