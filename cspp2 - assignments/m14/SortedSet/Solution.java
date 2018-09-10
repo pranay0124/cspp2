@@ -6,11 +6,11 @@ class Set {
     /**
      * { It is of int type }.
      */
-    private int[] setarr;
+    int[] setarr;
     /**
      * { It is of int type }.
      */
-    private int size;
+    int size;
     /**
      * Constructs the object.
      */
@@ -22,7 +22,7 @@ class Set {
     /**
      * { To resize }.
      */
-    private void resize() {
+    public void resize() {
         setarr = Arrays.copyOf(setarr, 2 * setarr.length);
     }
     /**
@@ -167,6 +167,9 @@ class Set {
         }
         return cartarr;
     }
+}
+
+class SortedSet extends Set {
     public Set subSet(int fromElement, int toElement) {
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
@@ -201,6 +204,8 @@ class Set {
         // return getSet()[s];
     }
 }
+
+    
 /**
  * Solution class for code-eval.
  */
@@ -211,6 +216,7 @@ public final class Solution {
     private Solution() {
 
     }
+
     /**
      * helper function to convert string input to int array.
      *
@@ -237,7 +243,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         // instantiate this set
-        Set s = new Set();
+        SortedSet s = new SortedSet();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
