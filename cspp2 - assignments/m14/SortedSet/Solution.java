@@ -82,6 +82,7 @@ class Set {
                 }
             }
         }
+        setarr = newsetarr.clone();
         //System.out.println(Arrays.toString(newsetarr));
     }
     /**
