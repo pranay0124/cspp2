@@ -420,7 +420,17 @@ class List {
 
     }
 }
+
+/**
+ * Class for solution.
+ */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Zero Parameter Constructor.
+    }
 
     /**
      * Main Function.
