@@ -197,8 +197,11 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set subSet(final int fromElement, final int toElement) {
+    public Set subSet(final int fromElement, final int toElement) throws Exception {
         Set newsetarr = new Set();
+        if (fromElement < 0 || toElement < 0 || fromElement >= toElement || toElement - fromElement == 1) {
+            throw new Exception("Invalid Arguments to Subset Exception");
+        }
         for (int i = 0; i < size(); i++) {
             if (super.get()[i] >= fromElement && super.get()[i] < toElement) {
                 newsetarr.add(super.get()[i]);
@@ -222,7 +225,7 @@ class SortedSet extends Set {
                 newsetarr.add(super.get()[i]);
             }
         }
-        if(newsetarr.toString().equals("{}")) {
+        if (newsetarr.toString().equals("{}")) {
             throw new Exception();
         }
         return newsetarr;
@@ -233,10 +236,9 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    int last() {
+    int last() throws Exception {
         if (size() <= 0) {
-            System.out.println("Set Empty Exception");
-            return -1;
+            throw new Exception("Set Empty Exception");
         }
         sort(super.get());
         int s = size() - 1;
@@ -340,31 +342,35 @@ public final class Solution {
                 intArray = new int[2];
                 intArray[0] = Integer.parseInt(strArray[0]);
                 intArray[1] = Integer.parseInt(strArray[1]);
-                if (intArray[0] > intArray[1]) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                } else {
+                try {
                     Set sa = new Set();
                     sa = s.subSet(intArray[0], intArray[1]);
                     System.out.println(sa);
-                }
-                break;
-            case "headSet":
-                String[] strArray1 = tokens[1].split(",");
-                intArray = new int[1];
-                intArray[0] = Integer.parseInt(strArray1[0]);
-                try {
-                    System.out.println(s.headSet(intArray[0]));
                 } catch(Exception e) {
-                    System.out.println("Set Empty Exception");
+                    System.out.println(e.getMessage());
                 }
-                
-                break;
-            case "last":
-                System.out.println(s.last());
-                break;
-            default:
-                break;
+            break;
+        case "headSet":
+            String[] strArray1 = tokens[1].split(",");
+            intArray = new int[1];
+            intArray[0] = Integer.parseInt(strArray1[0]);
+            try {
+                System.out.println(s.headSet(intArray[0]));
+            } catch (Exception e) {
+                System.out.println("Set Empty Exception");
             }
+
+            break;
+        case "last":
+            try {
+                System.out.println(s.last());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            break;
+        default:
+            break;
         }
     }
+}
 }
