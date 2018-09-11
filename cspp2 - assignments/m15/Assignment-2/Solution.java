@@ -199,7 +199,7 @@ class SortedSet extends Set {
      */
     public Set subSet(final int fromElement, final int toElement) throws Exception {
         Set newsetarr = new Set();
-        if (fromElement < 0 || toElement < 0 || fromElement >= toElement || toElement - fromElement == 1) {
+        if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
         }
         for (int i = 0; i < size(); i++) {
