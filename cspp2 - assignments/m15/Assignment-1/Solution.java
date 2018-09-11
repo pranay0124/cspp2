@@ -172,9 +172,11 @@ class List {
      *
      */
     /**
-     * Function to remove elements from list.
+     * Removes the particular element at the index
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
@@ -300,9 +302,11 @@ class List {
      array.
     */
     /**
-     * Removes the selected elements from the list.
+     * Removes all the elements given in the new array.
      *
-     * @param      newArray  The new array
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
      */
     public void removeAll(final int[] newArray) throws Exception {
         // write the logic
