@@ -190,12 +190,14 @@ class Set {
  */
 class SortedSet extends Set {
     /**
-     * SubSet Function.
+     * SUbset function.
      *
      * @param      fromElement  The from element
      * @param      toElement    To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception    { exception_description }
      */
     public Set subSet(final int fromElement, final int toElement)
     throws Exception {
@@ -217,6 +219,8 @@ class SortedSet extends Set {
      * @param      toElement  To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public Set headSet(final int toElement) throws Exception {
         sort(super.get());
@@ -233,9 +237,11 @@ class SortedSet extends Set {
     }
 
     /**
-     * Last Function.
+     * Returns last element in the set.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     int last() throws Exception {
         if (size() <= 0) {
