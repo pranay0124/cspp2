@@ -342,7 +342,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
                 System.out.println(Arrays.deepToString
-                         (s.cartesianProduct(t)));
+                        (s.cartesianProduct(t)));
                 break;
             case "subSet":
                 String[] strArray = tokens[1].split(",");
