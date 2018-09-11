@@ -172,7 +172,7 @@ class List {
      *
      */
     /**
-     * Removes the particular element at the index
+     * Removes the particular element at the index.
      *
      * @param      index      The index
      *
@@ -357,12 +357,14 @@ class List {
     and also if start is greater than end.
     */
     /**
-     * Prints a sublist of elements from the list.
+     * SubList Function to print a selected list.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public List subList(final int start, final int end) throws Exception {
         // write the logic for subList
