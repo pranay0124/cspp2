@@ -364,7 +364,7 @@ class List {
             if (start < 0 || end < 0 || start > end
                 || start == end || size == 0) {
                 throw new Exception();
-            }       
+            }
         } catch (Exception e) {
             System.out.println("Index Out of Bounds Exception");
             return null;
