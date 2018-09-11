@@ -197,7 +197,8 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set subSet(final int fromElement, final int toElement) throws Exception {
+    public Set subSet(final int fromElement, final int toElement)
+    throws Exception {
         Set newsetarr = new Set();
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
