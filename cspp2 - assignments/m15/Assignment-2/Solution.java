@@ -353,7 +353,7 @@ public final class Solution {
                     Set sa = new Set();
                     sa = s.subSet(intArray[0], intArray[1]);
                     System.out.println(sa);
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
             break;
