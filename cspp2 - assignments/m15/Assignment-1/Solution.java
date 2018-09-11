@@ -87,7 +87,7 @@ class List {
     /**
      * List Function.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -180,7 +180,7 @@ class List {
             }
             size--;
         } else {
-           throw new Exception(); 
+           throw new Exception();
         }
     } catch (Exception e) {
         System.out.println("Invalid Position Exception");
@@ -361,8 +361,10 @@ class List {
     public List subList(final int start, final int end) {
         // write the logic for subList
         try {
-            if (start < 0 || end < 0 || start > end || start == end || size == 0)
-            throw new Exception();            
+            if (start < 0 || end < 0 || start > end || 
+                start == end || size == 0) {
+                throw new Exception();
+            }            
         } catch(Exception e) {
             System.out.println("Index Out of Bounds Exception");
             return null;
