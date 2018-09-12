@@ -175,8 +175,8 @@ class BookYourShow {
      */
     Show getAShow(final String movie, final String showTime) {
         for (Show show : showList) {
-            if (show.getMovie().equals(movie) &&
-                show.getShowTime().equals(showTime)) {
+            if (show.getMovie().equals(movie)
+                && show.getShowTime().equals(showTime)) {
                 return show;
             }
         }
