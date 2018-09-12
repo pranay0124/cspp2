@@ -96,10 +96,10 @@ class Patron {
     private String mobile;
     
     /**
-     * Constructs the object patron.
+     * Constructs the object.
      *
-     * @param      name    The name
-     * @param      mobile  The mobile
+     * @param      name1    The name 1
+     * @param      mobile1  The mobile 1
      */
     Patron(final String name1, final String mobile1) {
         this.name = name1;
