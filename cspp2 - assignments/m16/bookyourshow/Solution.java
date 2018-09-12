@@ -23,6 +23,13 @@ class Show {
 	 */
 	private String[] seats;
 
+	/**
+	 * Constructs the object Show.
+	 *
+	 * @param      movie     The movie
+	 * @param      showTime  The show time
+	 * @param      seats     The seats
+	 */
 	Show (String movie, String showTime, String[] seats) {
 		this.movie = movie;
 		this.showTime = showTime;
