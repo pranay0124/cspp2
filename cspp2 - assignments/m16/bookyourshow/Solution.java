@@ -254,6 +254,12 @@ class BookYourShow {
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        // Zero Parameter Constructor.
+    }
+    /**
      * Main Function
      *
      * @param      args  The arguments
