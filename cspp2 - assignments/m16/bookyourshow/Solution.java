@@ -161,7 +161,7 @@ class BookYourShow {
      *
      * @param      show  The show
      */
-    void addAShow(Show show) {
+    void addAShow(final Show show) {
         showList.add(show);
     }
     
