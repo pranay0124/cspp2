@@ -35,7 +35,7 @@ class Show {
         this.showTime = showTime1;
         this.seats = seats1;
     }
-    
+
     /**
      * Gets the movie.
      *
@@ -44,7 +44,7 @@ class Show {
     String getMovie() {
         return movie;
     }
-    
+
     /**
      * Gets the show time.
      *
@@ -53,7 +53,7 @@ class Show {
     String getShowTime() {
         return showTime;
     }
-    
+
     /**
      * Gets the seats.
      *
@@ -62,7 +62,7 @@ class Show {
     String[] getSeats() {
         return seats;
     }
-    
+
     /**
      * Sets the seat na.
      *
