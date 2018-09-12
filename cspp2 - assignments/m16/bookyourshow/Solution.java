@@ -135,19 +135,44 @@ class Patron {
 
 }
 
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
+    /**
+     * ArrayList showlist.
+     */
     ArrayList<Show> showList;
+    /**
+     * ArrayList TicketList.
+     */
     ArrayList<String> ticketList;
-
+    
+    /**
+     * Constructs the object.
+     */
     BookYourShow() {
         showList = new ArrayList<>();
         ticketList = new ArrayList<>();
     }
-
+    
+    /**
+     * Adds a show.
+     *
+     * @param      show  The show
+     */
     void addAShow(Show show) {
         showList.add(show);
     }
-
+    
+    /**
+     * Gets a show.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     *
+     * @return     A show.
+     */
     Show getAShow(String movie, String showTime ) {
         for (Show show : showList) {
             if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime)) {
@@ -156,7 +181,15 @@ class BookYourShow {
         }
         return null;
     }
-
+    
+    /**
+     * Function for book a show.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     * @param      patron    The patron
+     * @param      seats     The seats
+     */
     void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
@@ -177,7 +210,14 @@ class BookYourShow {
             ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
         }
     }
-
+    
+    /**
+     * function for PrintTicket.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     * @param      mobile    The mobile
+     */
     void printTicket(String movie, String showTime, String mobile) {
         String t = mobile + " " + movie + " " + showTime;
         // for (String ticket : ticketList) {
@@ -191,7 +231,10 @@ class BookYourShow {
             System.out.println("Invalid");
         }
     }
-
+    
+    /**
+     * Shows all.
+     */
     void showAll() {
         for (Show show : showList) {
             System.out.println(show.getMovie() + "," + show.getShowTime() + "," + Arrays.toString(show.getSeats()).replace(" ", ""));
