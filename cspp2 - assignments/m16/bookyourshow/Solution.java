@@ -142,11 +142,11 @@ class BookYourShow {
     /**
      * ArrayList showlist.
      */
-    ArrayList<Show> showList;
+    private ArrayList<Show> showList;
     /**
      * ArrayList TicketList.
      */
-    ArrayList<String> ticketList;
+    private ArrayList<String> ticketList;
     
     /**
      * Constructs the object.
