@@ -30,7 +30,7 @@ class Show {
      * @param      showTime  The show time
      * @param      seats     The seats
      */
-    Show (String movie, String showTime, String[] seats) {
+    Show(final String movie, final String showTime, final String[] seats) {
         this.movie = movie;
         this.showTime = showTime;
         this.seats = seats;
