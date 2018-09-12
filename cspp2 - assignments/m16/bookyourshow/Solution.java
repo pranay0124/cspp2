@@ -252,7 +252,7 @@ class BookYourShow {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -260,7 +260,7 @@ class Solution {
         // Zero Parameter Constructor.
     }
     /**
-     * Main Function
+     * Main Function.
      *
      * @param      args  The arguments
      */
