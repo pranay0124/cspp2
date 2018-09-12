@@ -24,11 +24,11 @@ class Show {
     private String[] seats;
 
     /**
-     * Constructs the object Show.
+     * Constructs the object for show.
      *
-     * @param      movie     The movie
-     * @param      showTime  The show time
-     * @param      seats     The seats
+     * @param      movie1     The movie 1
+     * @param      showTime1  The show time 1
+     * @param      seats1     The seats 1
      */
     Show(final String movie1, final String showTime1, final String[] seats1) {
         this.movie = movie1;
