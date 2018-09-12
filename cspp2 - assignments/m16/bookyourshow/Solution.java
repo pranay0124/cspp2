@@ -117,7 +117,7 @@ class BookYourShow {
 
 	void showAll() {
 		for (Show show : showList) {
-			System.out.println(show.getMovie() + " " + show.getShowTime() + " " + Arrays.toString(show.getSeats()).replace(" ", ""));
+			System.out.println(show.getMovie() + "," + show.getShowTime() + "," + Arrays.toString(show.getSeats()).replace(" ", ""));
 			//System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ", ""));
 		}
 
