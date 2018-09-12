@@ -244,7 +244,15 @@ class BookYourShow {
     }
 }
 
+/**
+ * Class for solution.
+ */
 class Solution {
+    /**
+     * Main Function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
