@@ -1,10 +1,26 @@
+/**
+ * Author : Pranay Kumar Y.
+ * Date : 12th September,2018.
+ */
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+/**
+ * Class for show.
+ */
 class Show {
+	/**
+	 * String variable movie.
+	 */
 	private String movie;
+	/**
+	 * String variable ShowTime.
+	 */
 	private String showTime;
+	/**
+	 * String Array for seats.
+	 */
 	private String[] seats;
 
 	Show (String movie, String showTime, String[] seats) {
