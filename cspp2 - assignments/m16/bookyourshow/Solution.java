@@ -71,7 +71,7 @@ class Show {
     void setSeatNA(final int index) {
         seats[index] = "N/A";
     }
-    
+
     /**
      * Returns a string representation of the object.
      *
@@ -94,7 +94,7 @@ class Patron {
      * String variable for mobile.
      */
     private String mobile;
-    
+
     /**
      * Constructs the object.
      *
@@ -105,7 +105,7 @@ class Patron {
         this.name = name1;
         this.mobile = mobile1;
     }
-    
+
     /**
      * Gets the name.
      *
@@ -114,7 +114,7 @@ class Patron {
     String getName() {
         return name;
     }
-    
+
     /**
      * Gets the mobile.
      *
@@ -123,7 +123,7 @@ class Patron {
     String getMobile() {
         return mobile;
     }
-    
+
     /**
      * Returns a string representation of the object.
      *
@@ -147,7 +147,7 @@ class BookYourShow {
      * ArrayList TicketList.
      */
     private ArrayList<String> ticketList;
-    
+
     /**
      * Constructs the object.
      */
@@ -155,7 +155,7 @@ class BookYourShow {
         showList = new ArrayList<>();
         ticketList = new ArrayList<>();
     }
-    
+
     /**
      * Adds a show.
      *
@@ -164,7 +164,7 @@ class BookYourShow {
     void addAShow(final Show show) {
         showList.add(show);
     }
-    
+
     /**
      * Gets a show.
      *
@@ -182,7 +182,7 @@ class BookYourShow {
         }
         return null;
     }
-    
+
     /**
      * Function for book a show.
      *
@@ -212,7 +212,7 @@ class BookYourShow {
             ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
         }
     }
-    
+
     /**
      * function for PrintTicket.
      *
@@ -233,7 +233,7 @@ class BookYourShow {
             System.out.println("Invalid");
         }
     }
-    
+
     /**
      * Shows all.
      */
