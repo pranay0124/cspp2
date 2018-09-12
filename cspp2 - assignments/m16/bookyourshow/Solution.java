@@ -35,11 +35,21 @@ class Show {
         this.showTime = showTime1;
         this.seats = seats1;
     }
-
+    
+    /**
+     * Gets the movie.
+     *
+     * @return     The movie.
+     */
     String getMovie() {
         return movie;
     }
-
+    
+    /**
+     * Gets the show time.
+     *
+     * @return     The show time.
+     */
     String getShowTime() {
         return showTime;
     }
