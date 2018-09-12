@@ -53,29 +53,64 @@ class Show {
     String getShowTime() {
         return showTime;
     }
-
+    
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     String[] getSeats() {
         return seats;
     }
-
+    
+    /**
+     * Sets the seat na.
+     *
+     * @param      index  The index
+     */
     void setSeatNA(int index) {
         seats[index] = "N/A";
     }
-
+    
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return movie + "," + showTime;
     }
 }
 
+/**
+ * Class for patron.
+ */
 class Patron {
+    /**
+     * String variable for name.
+     */
     private String name;
+    /**
+     * String variable for mobile.
+     */
     private String mobile;
-
+    
+    /**
+     * Constructs the object patron.
+     *
+     * @param      name    The name
+     * @param      mobile  The mobile
+     */
     Patron (String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
-
+    
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     String getName() {
         return name;
     }
