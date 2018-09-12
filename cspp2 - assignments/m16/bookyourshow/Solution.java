@@ -68,7 +68,7 @@ class Show {
      *
      * @param      index  The index
      */
-    void setSeatNA(int index) {
+    void setSeatNA(final int index) {
         seats[index] = "N/A";
     }
     
@@ -101,9 +101,9 @@ class Patron {
      * @param      name    The name
      * @param      mobile  The mobile
      */
-    Patron (String name, String mobile) {
-        this.name = name;
-        this.mobile = mobile;
+    Patron(final String name1, final String mobile1) {
+        this.name = name1;
+        this.mobile = mobile1;
     }
     
     /**
@@ -114,11 +114,21 @@ class Patron {
     String getName() {
         return name;
     }
-
+    
+    /**
+     * Gets the mobile.
+     *
+     * @return     The mobile.
+     */
     String getMobile() {
         return mobile;
     }
-
+    
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return name + " " + mobile;
     }
