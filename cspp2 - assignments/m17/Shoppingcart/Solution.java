@@ -48,7 +48,6 @@ class ShoppingCart {
 		for(Item catalogitem : catalogList) {
 			if((catalogitem.getName()).equals(item.getName())) {
 				cartList.add(item);
-				System.out.println(item.toString());
 			}
 		}
 	}
@@ -108,8 +107,7 @@ class Solution {
 
 			case "Add":
 				String[] c2 = tokens[1].split(",");
-
-				sc.addToCart(new Item(c2[0], c2[1], null));
+				sc.addToCart(new Item(c2[0], c2[1], "null"));
 				System.out.println("see me Add ");
 				break;
 
