@@ -166,8 +166,9 @@ class ShoppingCart {
 		}
 		float total = getTotalAmount();
 		System.out.println("Total:" + total);
-		System.out.println("Disc%:" + 0.01f * coupon * total);
-		System.out.println("Tax:" + 0.15f * (0.01f * coupon * total));
+		float disc = 0.01f * coupon * total;
+		System.out.println("Disc%:" + disc);
+		System.out.println("Tax:" + 0.15f * (total-disc));
 		System.out.println("Payable amount: " + getPayableAmount());
 	}
 }
