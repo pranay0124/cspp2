@@ -89,7 +89,18 @@ class ShoppingCart {
 	}
 
 	void getTotalAmount() {
-		System.out.println("see me");
+		int amount = 0;
+		for (Item cartitem : cartList) {
+			for (Item catalogitem : catalogList) {
+				if ((cartitem.getName()).equals(catalogitem.getName())) {
+					int a = Integer.parseInt(cartitem.getQuantity());
+					int b = Integer.parseInt(catalogitem.getPrice());
+					int c = a * b;
+					amount = amount + c;
+				}
+			}
+		}
+		System.out.println("totalAmount: " + amount);
 	}
 
 	void getPayableAmount() {
@@ -134,7 +145,9 @@ class Solution {
 				break;
 
 			case "totalAmount":
+				sc.getTotalAmount();
 				break;
+
 			case "payableAmount":
 				break;
 			case "remove":
