@@ -134,6 +134,7 @@ class Solution {
 			case "payableAmount":
 
 			case "remove":
+				System.out.println(tokens[1]);
 				String[] c3 = tokens[1].split(",");
 				sc.removeFromCart(new Item(c3[0], c3[1], null));
 				break;
