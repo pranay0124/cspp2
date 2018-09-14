@@ -55,7 +55,13 @@ class ShoppingCart {
 	void addToCart(Item item) {
 		for (Item catalogitem : catalogList) {
 			if ((catalogitem.getName()).equals(item.getName())) {
+				for (Item cartitem : cartList) {
+					if ((cartitem.getName()).equals(item.getName())) {
+						cartitem.setQuantity(cartitem.getQuantity() + item.getQuantity());
+					}
+				}
 				cartList.add(item);
+				return;
 			}
 		}
 	}
@@ -112,9 +118,14 @@ class ShoppingCart {
 		//System.out.println("Payable amount" + payableAmt);
 	}
 
-	void applyCoupon() {
-
-
+	void applyCoupon(String key) {
+		// 	String[] coupon = key.split("D");
+		// 	int value = Integer.parseInt(coupon[1]);
+		// 	if (value == 10 || value == 20 || value == 30 || value == 50) {
+		// 		couponApplied = true;
+		// 	} else {
+		// 		System.out.println("Invalid coupon");
+		// 	}
 	}
 
 	void printInvoice() {
@@ -162,7 +173,10 @@ class Solution {
 				sc.removeFromCart(new Item(c3[0], c3[1], null));
 				break;
 
-			case "Coupon":
+			case "coupon":
+				// if (couponApplied == false) {
+				// 	sc.applyCoupon(tokens[1]);
+				// }
 				break;
 			case "Print":
 				break;
