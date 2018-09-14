@@ -33,7 +33,7 @@ class Item {
 
 class ShoppingCart {
 	private ArrayList<Item> catalogList;
-	private ArrayList<String> cartList;
+	private ArrayList<Item> cartList;
 
 	ShoppingCart() {
 		catalogList = new ArrayList<>();
@@ -42,11 +42,14 @@ class ShoppingCart {
 
 	void addToCatalog(Item item) {
 		catalogList.add(item);
-		System.out.println(catalogList);
 	}
 
-	void addToCart() {
-
+	void addToCart(Item item) {
+		for(Item catalogitem : catalogList) {
+			if((catalogitem.getName()).equals(item.getName())) {
+				cartList.add(item);
+			}
+		}
 	}
 
 	void removeFromCart() {
@@ -54,15 +57,20 @@ class ShoppingCart {
 	}
 
 	void showCart() {
+		for (Item item : cartList) {
+			System.out.println(item.getName() + " " + item.getQuantity());
+		}
 
 	}
 
 	void showCatalog() {
-
+		for (Item item : catalogList) {
+			System.out.println(item.getName() + " " + item.getQuantity() + " " + item.getPrice());
+		}
 	}
 
 	void getTotalAmount() {
-
+		System.out.println("see me");
 	}
 
 	void getPayableAmount() {
@@ -87,26 +95,35 @@ class Solution {
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
 			switch (tokens[0]) {
-				case "Item":
-					String[] check = tokens[1].split(",");
-					sc.addToCatalog(new Item(check[0],check[1],check[2]));
-					break;
+			case "Item":
+				String[] c1 = tokens[1].split(",");
+				Item item = new Item(c1[0], c1[1], c1[2]);
+				sc.addToCatalog(item);
+				break;
 
-				case "catalog":
+			case "catalog":
+				sc.showCatalog();
+				break;
 
-				case "Add":
+			case "Add":
+				String[] c2 = tokens[1].split(",");
 
-				case "Show":
+				sc.addToCart(new Item(c2[0], c2[1], null));
+				break;
 
-				case "totalAmount":
+			case "Show":
+				sc.showCart();
+				break;
 
-				case "payableAmount":
+			case "totalAmount":
 
-				case "Remove":
+			case "payableAmount":
 
-				case "Coupon":
+			case "Remove":
 
-				case "Print":
+			case "Coupon":
+
+			case "Print":
 			}
 		}
 	}
