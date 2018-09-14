@@ -88,14 +88,14 @@ class ShoppingCart {
 		}
 	}
 
-	double getTotalAmount() {
-		double amount = 0;
+	float getTotalAmount() {
+		float amount = 0;
 		for (Item cartitem : cartList) {
 			for (Item catalogitem : catalogList) {
 				if ((cartitem.getName()).equals(catalogitem.getName())) {
-					double a = Integer.parseInt(cartitem.getQuantity());
-					double b = Integer.parseInt(catalogitem.getPrice());
-					double c = a * b;
+					float a = Integer.parseInt(cartitem.getQuantity());
+					float b = Integer.parseInt(catalogitem.getPrice());
+					float c = a * b;
 					amount = amount + c;
 				}
 			}
@@ -105,9 +105,9 @@ class ShoppingCart {
 	}
 
 	void getPayableAmount() {
-		double totalAmt = getTotalAmount();
-		double tax = totalAmt * 0.15f;
-		double payableAmt = totalAmt + tax;
+		float totalAmt = getTotalAmount();
+		float tax = totalAmt * 0.15f;
+		float payableAmt = totalAmt + tax;
 		System.out.println("Payable amount" + payableAmt);
 	}
 
