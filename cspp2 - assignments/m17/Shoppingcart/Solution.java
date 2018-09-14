@@ -104,14 +104,16 @@ class ShoppingCart {
 		//System.out.println("totalAmount: " + amount);
 	}
 
-	void getPayableAmount() {
+	float getPayableAmount() {
 		float totalAmt = getTotalAmount();
 		float tax = totalAmt * 0.15f;
 		float payableAmt = totalAmt + tax;
-		System.out.println("Payable amount" + payableAmt);
+		return payableAmt;
+		//System.out.println("Payable amount" + payableAmt);
 	}
 
 	void applyCoupon() {
+
 
 	}
 
@@ -153,7 +155,7 @@ class Solution {
 				break;
 
 			case "payableAmount":
-				sc.getPayableAmount();
+				System.out.println("Payable amount" + sc.getPayableAmount());
 				break;
 			case "remove":
 				String[] c3 = tokens[1].split(",");
