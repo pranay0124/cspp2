@@ -47,9 +47,7 @@ class ShoppingCart {
 	void addToCart(Item item) {
 		for(Item catalogitem : catalogList) {
 			if((catalogitem.getName()).equals(item.getName())) {
-				System.out.println("before adding");
 				cartList.add(item);
-				System.out.println("after adding");
 			}
 		}
 	}
@@ -114,7 +112,7 @@ class Solution {
 				System.out.println("see me Add ");
 				break;
 
-			case "Show":
+			case "show":
 				sc.showCart();
 				break;
 
