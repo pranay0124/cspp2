@@ -89,13 +89,13 @@ class ShoppingCart {
 	}
 
 	void getTotalAmount() {
-		int amount = 0;
+		double amount = 0;
 		for (Item cartitem : cartList) {
 			for (Item catalogitem : catalogList) {
 				if ((cartitem.getName()).equals(catalogitem.getName())) {
-					int a = Integer.parseInt(cartitem.getQuantity());
-					int b = Integer.parseInt(catalogitem.getPrice());
-					int c = a * b;
+					double a = Integer.parseInt(cartitem.getQuantity());
+					double b = Integer.parseInt(catalogitem.getPrice());
+					double c = a * b;
 					amount = amount + c;
 				}
 			}
