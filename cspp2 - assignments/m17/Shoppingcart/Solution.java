@@ -1,8 +1,15 @@
 import java.util.Scanner;
-import java.util.Arrays;
-import java.util.ArrayList;
 
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//Zero Parameter Constructor.
+	}
 	public static void main(String[] args) {
 		ShoppingCart sc = new ShoppingCart();
 		Scanner scan = new Scanner(System.in);
