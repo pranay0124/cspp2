@@ -26,6 +26,14 @@ class Item {
 		return price;
 	}
 
+	String setQuantity(String qty) {
+		return this.quantity = qty;
+	}
+
+	String setPrice(String price) {
+		return this.price = price;
+	}
+
 	public String toString() {
 		return name + "," + quantity + "," + price;
 	}
@@ -52,8 +60,15 @@ class ShoppingCart {
 		}
 	}
 
-	void removeFromCart() {
-
+	void removeFromCart(Item item) {
+		for(Item cartitem : cartList) {
+			if((cartitem.getName()).equals(item.getName())) {
+				int a = Integer.parseInt(cartitem.getQuantity());
+				int b = Integer.parseInt(item.getQuantity());
+				int c = a-b;
+				cartitem.setQuantity(Integer.toString(c));
+			}
+		}
 	}
 
 	void showCart() {
@@ -119,6 +134,9 @@ class Solution {
 			case "payableAmount":
 
 			case "Remove":
+				String[] c3 = tokens[1].split(",");
+				sc.removeFromCart(new Item(c3[0], c3[1],null));
+				break;
 
 			case "Coupon":
 
