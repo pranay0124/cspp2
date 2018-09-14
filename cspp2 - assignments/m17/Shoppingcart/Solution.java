@@ -75,11 +75,11 @@ class ShoppingCart {
 	}
 
 	//cartitem = p
-	void removeFromCart(Item item) {
+	void removeFromCart(Item itme) {
 		for (Item p : cartList) {
-			if ((p.getName()).equals(item.getName())) {
+			if ((p.getName()).equals(itme.getName())) {
 				int a = Integer.parseInt(p.getQuantity());
-				int b = Integer.parseInt(item.getQuantity());
+				int b = Integer.parseInt(itme.getQuantity());
 				int c = a - b;
 				if (c == 0) {
 					cartList.remove(p);
