@@ -48,6 +48,7 @@ class ShoppingCart {
 		for(Item catalogitem : catalogList) {
 			if((catalogitem.getName()).equals(item.getName())) {
 				cartList.add(item);
+				System.out.println(item.toString());
 			}
 		}
 	}
