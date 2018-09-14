@@ -106,7 +106,9 @@ class ShoppingCart {
 
 	void getPayableAmount() {
 		double totalAmt = getTotalAmount();
+		System.out.println(totalAmt);
 		double payableAmt = totalAmt * (15/100);
+		System.out.println(payableAmt);
 		System.out.println("Payable amount" + payableAmt);
 	}
 
