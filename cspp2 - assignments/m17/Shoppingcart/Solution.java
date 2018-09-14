@@ -105,7 +105,7 @@ class Solution {
 				sc.showCatalog();
 				break;
 
-			case "Add":
+			case "add":
 				String[] c2 = tokens[1].split(",");
 				System.out.println("see me");
 				sc.addToCart(new Item(c2[0], c2[1],null));
