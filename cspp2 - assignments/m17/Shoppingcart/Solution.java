@@ -200,7 +200,7 @@ class Solution {
 			case "coupon":
 				sc.applyCoupon(tokens[1]);
 				break;
-			case "Print":
+			case "print":
 				sc.printInvoice();
 				break;
 			}
