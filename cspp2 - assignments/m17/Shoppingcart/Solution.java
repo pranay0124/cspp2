@@ -54,15 +54,17 @@ class ShoppingCart {
 		catalogList.add(item);
 	}
 
+	//logitem = catalogitem
+	//caitem = cartitem
 	void addToCart(Item item) {
 		for (Item logitem : catalogList) {
 			if ((logitem.getName()).equals(item.getName())) {
-				for (Item cartitem : cartList) {
-					if ((cartitem.getName()).equals(item.getName())) {
-						int a = Integer.parseInt(cartitem.getQuantity());
+				for (Item caitem : cartList) {
+					if ((caitem.getName()).equals(item.getName())) {
+						int a = Integer.parseInt(caitem.getQuantity());
 						int b = Integer.parseInt(item.getQuantity());
 						int c = a + b;
-						cartitem.setQuantity(Integer.toString(c));
+						caitem.setQuantity(Integer.toString(c));
 						return;
 					}
 				}
