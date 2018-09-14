@@ -56,30 +56,30 @@ class ShoppingCart {
 
 	//catalogitem = logitem
 	//cartitem = caitem
-	void addToCart(Item item) {
+	void addToCart(Item item1) {
 		for (Item logitem : catalogList) {
-			if ((logitem.getName()).equals(item.getName())) {
+			if ((logitem.getName()).equals(item1.getName())) {
 				for (Item caitem : cartList) {
-					if ((caitem.getName()).equals(item.getName())) {
+					if ((caitem.getName()).equals(item1.getName())) {
 						int a = Integer.parseInt(caitem.getQuantity());
-						int b = Integer.parseInt(item.getQuantity());
+						int b = Integer.parseInt(item1.getQuantity());
 						int c = a + b;
 						caitem.setQuantity(Integer.toString(c));
 						return;
 					}
 				}
-				cartList.add(item);
+				cartList.add(item1);
 				return;
 			}
 		}
 	}
 
 	//cartitem = p
-	void removeFromCart(Item itme) {
+	void removeFromCart(Item item2) {
 		for (Item p : cartList) {
-			if ((p.getName()).equals(itme.getName())) {
+			if ((p.getName()).equals(item2.getName())) {
 				int a = Integer.parseInt(p.getQuantity());
-				int b = Integer.parseInt(itme.getQuantity());
+				int b = Integer.parseInt(item2.getQuantity());
 				int c = a - b;
 				if (c == 0) {
 					cartList.remove(p);
