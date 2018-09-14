@@ -104,13 +104,15 @@ class ShoppingCart {
 		}
 	}
 
+	//cartitem = x
+	//catalogitem = y
 	float getTotalAmount() {
 		float amount = 0;
-		for (Item cartitem : cartList) {
-			for (Item catalogitem : catalogList) {
-				if ((cartitem.getName()).equals(catalogitem.getName())) {
-					float a = Integer.parseInt(cartitem.getQuantity());
-					float b = Integer.parseInt(catalogitem.getPrice());
+		for (Item x : cartList) {
+			for (Item y : catalogList) {
+				if ((x.getName()).equals(y.getName())) {
+					float a = Integer.parseInt(x.getQuantity());
+					float b = Integer.parseInt(y.getPrice());
 					float c = a * b;
 					amount = amount + c;
 				}
