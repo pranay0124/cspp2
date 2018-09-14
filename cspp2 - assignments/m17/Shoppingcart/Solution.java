@@ -55,8 +55,8 @@ class ShoppingCart {
 	}
 
 	void addToCart(Item item) {
-		for (Item catalogitem : catalogList) {
-			if ((catalogitem.getName()).equals(item.getName())) {
+		for (Item logitem : catalogList) {
+			if ((logitem.getName()).equals(item.getName())) {
 				for (Item cartitem : cartList) {
 					if ((cartitem.getName()).equals(item.getName())) {
 						int a = Integer.parseInt(cartitem.getQuantity());
