@@ -130,9 +130,9 @@ class Solution {
 				break;
 
 			case "totalAmount":
-
+				break;
 			case "payableAmount":
-
+				break;
 			case "remove":
 				System.out.println(tokens[1]);
 				String[] c3 = tokens[1].split(",");
@@ -140,8 +140,9 @@ class Solution {
 				break;
 
 			case "Coupon":
-
+				break;
 			case "Print":
+				break;
 			}
 		}
 	}
