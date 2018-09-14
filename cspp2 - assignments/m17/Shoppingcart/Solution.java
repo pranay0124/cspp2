@@ -66,7 +66,11 @@ class ShoppingCart {
 				int a = Integer.parseInt(cartitem.getQuantity());
 				int b = Integer.parseInt(item.getQuantity());
 				int c = a - b;
-				cartitem.setQuantity(Integer.toString(c));
+				if (c == 0) {
+					cartList.remove(cartitem);
+				} else {
+					cartitem.setQuantity(Integer.toString(c));
+				}
 			}
 		}
 	}
