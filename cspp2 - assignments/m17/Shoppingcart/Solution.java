@@ -76,18 +76,23 @@ class ShoppingCart {
 
 	//cartitem = p
 	void removeFromCart(Item item2) {
+		int i = 0;
+		boolean flag = false;
 		for (Item p : cartList) {
 			if ((p.getName()).equals(item2.getName())) {
 				int a = Integer.parseInt(p.getQuantity());
 				int b = Integer.parseInt(item2.getQuantity());
 				int c = a - b;
 				if (c == 0) {
-					cartList.remove(p);
+					flag = true;
 				} else {
 					p.setQuantity(Integer.toString(c));
 				}
+				break;
 			}
+			i++;
 		}
+		if(flag) cartList.remove(i);
 	}
 
 	void showCart() {
