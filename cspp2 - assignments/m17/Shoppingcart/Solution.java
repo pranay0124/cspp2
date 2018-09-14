@@ -92,7 +92,7 @@ class ShoppingCart {
 			}
 			i++;
 		}
-		if(flag) cartList.remove(i);
+		if (flag) cartList.remove(i);
 	}
 
 	void showCart() {
@@ -168,7 +168,7 @@ class ShoppingCart {
 		System.out.println("Total:" + total);
 		float disc = 0.01f * coupon * total;
 		System.out.println("Disc%:" + disc);
-		System.out.println("Tax:" + Math.round(0.15f * (total-disc)*100.0)/100.0);
+		System.out.println("Tax:" + Math.round(0.15f * (total - disc) * 100.0) / 100.0);
 		System.out.println("Payable amount: " + getPayableAmount());
 	}
 }
@@ -177,6 +177,7 @@ class Solution {
 	public static void main(String[] args) {
 		ShoppingCart sc = new ShoppingCart();
 		Scanner scan = new Scanner(System.in);
+		boolean a = false;
 		int testcases = Integer.parseInt(scan.nextLine());
 		for (int i = 0; i < testcases; i++) {
 			String line = scan.nextLine();
@@ -214,7 +215,11 @@ class Solution {
 				break;
 
 			case "coupon":
-				sc.applyCoupon(tokens[1]);
+				if (a == false) {
+					if (sc.applyCoupon(tokens[1])) {
+						a = true;
+					}
+				}
 				break;
 			case "print":
 				sc.printInvoice();
