@@ -88,7 +88,7 @@ class ShoppingCart {
 		}
 	}
 
-	void getTotalAmount() {
+	double getTotalAmount() {
 		double amount = 0;
 		for (Item cartitem : cartList) {
 			for (Item catalogitem : catalogList) {
@@ -100,11 +100,14 @@ class ShoppingCart {
 				}
 			}
 		}
-		System.out.println("totalAmount: " + amount);
+		return amount;
+		//System.out.println("totalAmount: " + amount);
 	}
 
 	void getPayableAmount() {
-
+		double totalAmt = getTotalAmount();
+		double payableAmt = totalAmt * (15/100);
+		System.out.println("Payable amount" + payableAmt);
 	}
 
 	void applyCoupon() {
@@ -145,10 +148,11 @@ class Solution {
 				break;
 
 			case "totalAmount":
-				sc.getTotalAmount();
+				System.out.println("totalAmount: " + sc.getTotalAmount());
 				break;
 
 			case "payableAmount":
+				sc.getPayableAmount();
 				break;
 			case "remove":
 				String[] c3 = tokens[1].split(",");
