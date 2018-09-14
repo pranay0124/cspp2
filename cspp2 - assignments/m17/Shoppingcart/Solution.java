@@ -54,8 +54,8 @@ class ShoppingCart {
 		catalogList.add(item);
 	}
 
-	//logitem = catalogitem
-	//caitem = cartitem
+	//catalogitem = logitem
+	//cartitem = caitem
 	void addToCart(Item item) {
 		for (Item logitem : catalogList) {
 			if ((logitem.getName()).equals(item.getName())) {
@@ -74,16 +74,17 @@ class ShoppingCart {
 		}
 	}
 
+	//cartitem = p
 	void removeFromCart(Item item) {
-		for (Item cartitem : cartList) {
-			if ((cartitem.getName()).equals(item.getName())) {
-				int a = Integer.parseInt(cartitem.getQuantity());
+		for (Item p : cartList) {
+			if ((p.getName()).equals(item.getName())) {
+				int a = Integer.parseInt(p.getQuantity());
 				int b = Integer.parseInt(item.getQuantity());
 				int c = a - b;
 				if (c == 0) {
-					cartList.remove(cartitem);
+					cartList.remove(p);
 				} else {
-					cartitem.setQuantity(Integer.toString(c));
+					p.setQuantity(Integer.toString(c));
 				}
 			}
 		}
