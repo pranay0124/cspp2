@@ -57,7 +57,7 @@ final class Solution {
                 break;
 
             case "coupon":
-                if (a) {
+                if (!a) {
                     if (sc.applyCoupon(tokens[1])) {
                         a = true;
                     }
