@@ -190,7 +190,7 @@ class Solution {
 				break;
 
 			case "payableAmount":
-				System.out.println("Payable amount" + sc.getPayableAmount());
+				System.out.println("Payable amount: " + sc.getPayableAmount());
 				break;
 			case "remove":
 				String[] c3 = tokens[1].split(",");
@@ -201,6 +201,7 @@ class Solution {
 				sc.applyCoupon(tokens[1]);
 				break;
 			case "Print":
+				sc.printInvoice();
 				break;
 			}
 		}
