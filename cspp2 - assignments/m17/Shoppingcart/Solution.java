@@ -145,7 +145,10 @@ class ShoppingCart {
 		for (Item cartitem : cartList) {
 			for (Item catalogitem : catalogList) {
 				if ((cartitem.getName()).equals(catalogitem.getName())) {
-					System.out.println(cartitem.getName() + " " + cartitem.getQuantity() + " " + catalogitem.getPrice());
+					String a = cartitem.getName();
+					String b = cartitem.getQuantity();
+					float c = Float.parseFloat(catalogitem.getPrice());
+					System.out.println(a + " " + b + " " + c);
 				}
 			}
 		}
