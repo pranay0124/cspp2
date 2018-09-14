@@ -144,14 +144,16 @@ class ShoppingCart {
 		return flag;
 	}
 
+	//cartitem = cart
+	//catalogitem = catalog
 	void printInvoice() {
 		System.out.println("Name   quantity   Price");
-		for (Item cartitem : cartList) {
-			for (Item catalogitem : catalogList) {
-				if ((cartitem.getName()).equals(catalogitem.getName())) {
-					String a = cartitem.getName();
-					String b = cartitem.getQuantity();
-					float c = Float.parseFloat(catalogitem.getPrice());
+		for (Item cart : cartList) {
+			for (Item catalog : catalogList) {
+				if ((cart.getName()).equals(catalog.getName())) {
+					String a = cart.getName();
+					String b = cart.getQuantity();
+					float c = Float.parseFloat(catalog.getPrice());
 					System.out.println(a + " " + b + " " + c);
 				}
 			}
