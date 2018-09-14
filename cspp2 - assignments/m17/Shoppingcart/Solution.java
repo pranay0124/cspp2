@@ -53,19 +53,19 @@ class ShoppingCart {
 	}
 
 	void addToCart(Item item) {
-		for(Item catalogitem : catalogList) {
-			if((catalogitem.getName()).equals(item.getName())) {
+		for (Item catalogitem : catalogList) {
+			if ((catalogitem.getName()).equals(item.getName())) {
 				cartList.add(item);
 			}
 		}
 	}
 
 	void removeFromCart(Item item) {
-		for(Item cartitem : cartList) {
-			if((cartitem.getName()).equals(item.getName())) {
+		for (Item cartitem : cartList) {
+			if ((cartitem.getName()).equals(item.getName())) {
 				int a = Integer.parseInt(cartitem.getQuantity());
 				int b = Integer.parseInt(item.getQuantity());
-				int c = a-b;
+				int c = a - b;
 				cartitem.setQuantity(Integer.toString(c));
 			}
 		}
@@ -122,7 +122,7 @@ class Solution {
 
 			case "add":
 				String[] c2 = tokens[1].split(",");
-				sc.addToCart(new Item(c2[0], c2[1],null));
+				sc.addToCart(new Item(c2[0], c2[1], null));
 				break;
 
 			case "show":
@@ -135,7 +135,9 @@ class Solution {
 
 			case "Remove":
 				String[] c3 = tokens[1].split(",");
-				sc.removeFromCart(new Item(c3[0], c3[1],null));
+				System.out.println(c3[0]);
+				System.out.println(c3[1]);
+				//sc.removeFromCart(new Item(c3[0], c3[1], null));
 				break;
 
 			case "Coupon":
