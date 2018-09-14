@@ -65,7 +65,7 @@ class ShoppingCart {
 
 	void showCatalog() {
 		for (Item item : catalogList) {
-			System.out.println(item.getName() + " " + item.getQuantity() + " " + item.getPrice());
+			System.out.println(item.getName() + " " + item.getQuantity() + " " + Double.parseDouble(item.getPrice()));
 		}
 	}
 
