@@ -42,6 +42,8 @@ class Item {
 class ShoppingCart {
 	private ArrayList<Item> catalogList;
 	private ArrayList<Item> cartList;
+	private int coupon = 0;
+	private boolean flag = false;
 
 	ShoppingCart() {
 		catalogList = new ArrayList<>();
@@ -57,7 +59,11 @@ class ShoppingCart {
 			if ((catalogitem.getName()).equals(item.getName())) {
 				for (Item cartitem : cartList) {
 					if ((cartitem.getName()).equals(item.getName())) {
-						cartitem.setQuantity(cartitem.getQuantity() + item.getQuantity());
+						int a = Integer.parseInt(cartitem.getQuantity());
+						int b = Integer.parseInt(item.getQuantity());
+						int c = a + b;
+						cartitem.setQuantity(Integer.toString(c));
+						return;
 					}
 				}
 				cartList.add(item);
@@ -84,6 +90,7 @@ class ShoppingCart {
 	void showCart() {
 		for (Item item : cartList) {
 			System.out.println(item.getName() + " " + item.getQuantity());
+			//System.out.println(item);
 		}
 
 	}
@@ -91,6 +98,7 @@ class ShoppingCart {
 	void showCatalog() {
 		for (Item item : catalogList) {
 			System.out.println(item.getName() + " " + item.getQuantity() + " " + Double.parseDouble(item.getPrice()));
+			//System.out.println(item);
 		}
 	}
 
@@ -111,25 +119,41 @@ class ShoppingCart {
 	}
 
 	float getPayableAmount() {
-		float totalAmt = getTotalAmount();
-		float tax = totalAmt * 0.15f;
-		float payableAmt = totalAmt + tax;
+		float payableAmt = 0;
+		float amt = getTotalAmount();
+		float dscnt = (coupon * amt) / 100;
+		float finalAmt = amt - dscnt;
+		float tax = (15 * finalAmt) / 100;
+		payableAmt = finalAmt + tax;
 		return payableAmt;
-		//System.out.println("Payable amount" + payableAmt);
 	}
 
-	void applyCoupon(String key) {
-		// 	String[] coupon = key.split("D");
-		// 	int value = Integer.parseInt(coupon[1]);
-		// 	if (value == 10 || value == 20 || value == 30 || value == 50) {
-		// 		couponApplied = true;
-		// 	} else {
-		// 		System.out.println("Invalid coupon");
-		// 	}
+	boolean applyCoupon(String key) {
+		String[] cou = key.split("D");
+		int value = Integer.parseInt(cou[1]);
+		if (value == 10 || value == 20 || value == 30 || value == 50) {
+			coupon = value;
+			flag = true;
+			return flag;
+		}
+		System.out.println("Invalid coupon");
+		return flag;
 	}
 
 	void printInvoice() {
-
+		System.out.println("Name   quantity   Price");
+		for (Item cartitem : cartList) {
+			for (Item catalogitem : catalogList) {
+				if ((cartitem.getName()).equals(catalogitem.getName())) {
+					System.out.println(cartitem.getName() + " " + cartitem.getQuantity() + " " + catalogitem.getPrice());
+				}
+			}
+		}
+		float total = getTotalAmount();
+		System.out.println("Total:" + total);
+		System.out.println("Disc%:" + 0.01f * coupon * total);
+		System.out.println("Tax:" + 0.15f * total);
+		System.out.println("Payable amount: " + getPayableAmount());
 	}
 }
 
@@ -174,9 +198,7 @@ class Solution {
 				break;
 
 			case "coupon":
-				// if (couponApplied == false) {
-				// 	sc.applyCoupon(tokens[1]);
-				// }
+				sc.applyCoupon(tokens[1]);
 				break;
 			case "Print":
 				break;
