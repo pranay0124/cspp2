@@ -16,7 +16,7 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         ShoppingCart sc = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
         boolean a = false;
@@ -66,6 +66,7 @@ final class Solution {
             case "print":
                 sc.printInvoice();
                 break;
+            default:
             }
         }
     }
