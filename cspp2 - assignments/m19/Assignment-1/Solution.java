@@ -147,11 +147,11 @@ public final class Solution {
 			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
 			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
 				pranay = pranay + questionList.get(i).choices[j] + "        ";
+				System.out.println(pranay.trim());
 			}
 			System.out.println();
 			System.out.println();
 		}
-		System.out.println(pranay.trim());
 		while (answerCount > 0) {
 			//System.out.println(answerCount + " counttt");
 			String line = s.nextLine();
