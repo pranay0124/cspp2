@@ -106,6 +106,7 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		
 		while (questionCount > 0) {
 			String line = s.nextLine();
 			String[] tokens = line.split(":");
@@ -113,6 +114,10 @@ public final class Solution {
 			int a = keys.length;
 			if (a <= 1) {
 				System.out.println("trick question  does not have enough answer choices");
+				return;
+			}
+			if(tokens[4] == " "){
+				System.out.println("Error! Malformed question");
 				return;
 			}
 			if (Integer.parseInt(tokens[3]) < 0) {
