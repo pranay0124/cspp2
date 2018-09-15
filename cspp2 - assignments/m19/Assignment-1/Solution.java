@@ -162,21 +162,21 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
-	// 	int finalScore = 0;
-	// 	for (int i = 0; i < questionList.size(); i++) {
-	// 		System.out.println(questionList.get(i).question);
-	// 		//System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
-	// 		if (answerList.get(i).equals(questionList.get(i).answer)) {
-	// 			System.out.println(" Correct Answer! - Marks Awarded: " + questionList.get(i).marks);
-	// 			finalScore += Integer.parseInt(questionList.get(i).marks);
-	// 		} else {
-	// 			System.out.println(" Wrong Answer! - Penalty: " + quizes.get(i).penality);
-	// 			finalScore += Integer.parseInt(quizes.get(i).penality);
-	// 		}
-	// 	}
-	// 	if (quizes.size() != 0) {
-	// 		System.out.println("Total Score: " + finalScore );
-	// 	}
-	// }
+		int finalScore = 0;
+		for (int i = 0; i < questionList.size(); i++) {
+			System.out.println(questionList.get(i).question);
+			//System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
+			if (answerList.get(i).equals(questionList.get(i).answer)) {
+				System.out.println(" Correct Answer! - Marks Awarded: " + questionList.get(i).marks);
+				finalScore += Integer.parseInt(questionList.get(i).marks);
+			} else {
+				System.out.println(" Wrong Answer! - Penalty: " + questionList.get(i).penalty);
+				finalScore += Integer.parseInt(questionList.get(i).penalty);
+			}
+		}
+		// if (quizes.size() != 0) {
+		// 	System.out.println("Total Score: " + finalScore );
+		// }
+	}
 }
-}
+
