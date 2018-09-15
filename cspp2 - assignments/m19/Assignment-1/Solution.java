@@ -52,7 +52,6 @@ class Quiz {
     //  return penalty;
     // }
 }
-
 /**
  * Solution class for code-eval.
  */
