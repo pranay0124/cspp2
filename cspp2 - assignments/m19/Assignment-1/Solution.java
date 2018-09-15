@@ -110,11 +110,25 @@ public final class Solution {
 			String line = s.nextLine();
 			String[] tokens = line.split(":");
 			String[] keys = tokens[1].split(",");
+			int a = keys.length;
 			Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
 			questionList.add(q);
 			questionCount--;
+			if (a <= 1) {
+				System.out.println("trick question  does not have enough answer choices");
+				return;
+			}
+			if (!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
+				System.out.println("Error! Correct answer choice number is out of range for question text 1");
+				return;
+			}
 		}
-		System.out.println(questionList.size() + " are added to the quiz");
+		int b = questionList.size();
+		if (b != 0) {
+			System.out.println(b + " are added to the quiz");
+		} else {
+			System.out.println("Quiz does not have questions");
+		}
 	}
 
 	/**
@@ -131,7 +145,7 @@ public final class Solution {
 		for (int i = 0; i < questionList.size(); i++) {
 			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
 			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
-				System.out.print(questionList.get(i).choices[j] + "	");
+				System.out.print(questionList.get(i).choices[j] + "        ");
 			}
 			System.out.println();
 			System.out.println();
