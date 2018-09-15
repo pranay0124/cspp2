@@ -175,7 +175,7 @@ public final class Solution {
             for (int i = 0; i < questionList.size(); i++) {
                 System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
                 for (int j = 0 ; j < questionList.get(i).choices.length - 1; j++) {
-                    System.out.print(questionList.get(i).choices[j] + "        ");
+                    System.out.print(questionList.get(i).choices[j] + " ");
                 }
                 // int z = questionList.get(i).choices.length;
                 // while (z > 0) {
