@@ -131,7 +131,7 @@ public final class Solution {
 		for (int i = 0; i < questionList.size(); i++) {
 			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
 			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
-				System.out.print(questionList.get(i).choices[j] + "   ");
+				System.out.print(questionList.get(i).choices[j] + "        ");
 			}
 			System.out.println();
 			System.out.println();
@@ -174,9 +174,9 @@ public final class Solution {
 				finalScore += Integer.parseInt(questionList.get(i).penalty);
 			}
 		}
-		// if (quizes.size() != 0) {
-		// 	System.out.println("Total Score: " + finalScore );
-		// }
+		if (questionList.size() != 0) {
+			System.out.println("Total Score: " + finalScore);
+		}
 	}
 }
 
