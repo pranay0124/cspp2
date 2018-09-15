@@ -165,7 +165,7 @@ public final class Solution {
                 // while (z > 0) {
                 //  System.out.println(questionList.get(i).choices[] + "        ");
                 // }
-                System.out.println(questionList.get(i).choices[questionList.get(i).choices.length-1]);
+                //System.out.println(questionList.get(i).choices[questionList.get(i).choices.length-1]);
                 System.out.println();
                 System.out.println();
             }
