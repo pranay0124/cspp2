@@ -111,9 +111,6 @@ public final class Solution {
 			String[] tokens = line.split(":");
 			String[] keys = tokens[1].split(",");
 			int a = keys.length;
-			Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
-			questionList.add(q);
-			questionCount--;
 			if (a <= 1) {
 				System.out.println("trick question  does not have enough answer choices");
 				return;
@@ -126,6 +123,9 @@ public final class Solution {
 				System.out.println("Error! Correct answer choice number is out of range for question text 1");
 				return;
 			}
+			Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
+			questionList.add(q);
+			questionCount--;
 		}
 		int b = questionList.size();
 		if (b != 0) {
