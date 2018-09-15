@@ -120,6 +120,7 @@ public final class Solution {
 			}
 			if(Integer.parseInt(tokens[3]) < 0) {
 				System.out.println("Invalid max marks for question about sony");
+				return;
 			}
 			if (!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
 				System.out.println("Error! Correct answer choice number is out of range for question text 1");
