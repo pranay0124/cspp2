@@ -114,7 +114,7 @@ public final class Solution {
 			questionList.add(q);
 			questionCount--;
 		}
-		System.out.println(questionCount + " are added to the quiz");
+		System.out.println(questionList.size() + " are added to the quiz");
 	}
 
 	/**
