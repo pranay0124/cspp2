@@ -142,11 +142,13 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
+		String pranay = "";
 		for (int i = 0; i < questionList.size(); i++) {
 			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
 			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
-				System.out.print(questionList.get(i).choices[j] + "        ");
+				pranay = pranay + questionList.get(i).choices[j] + "        ";
 			}
+			System.out.println(pranay.trim());
 			System.out.println();
 			System.out.println();
 		}
