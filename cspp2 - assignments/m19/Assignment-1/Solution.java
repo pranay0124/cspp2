@@ -145,13 +145,14 @@ public final class Solution {
 		String pranay = "";
 		for (int i = 0; i < questionList.size(); i++) {
 			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
+			System.out.println(pranay.trim());
 			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
 				pranay = pranay + questionList.get(i).choices[j] + "        ";
 			}
+
+			System.out.println();
+			System.out.println();
 		}
-		System.out.println(pranay.trim());
-		System.out.println();
-		System.out.println();
 		while (answerCount > 0) {
 			//System.out.println(answerCount + " counttt");
 			String line = s.nextLine();
