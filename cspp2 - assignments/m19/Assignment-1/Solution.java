@@ -106,38 +106,42 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		
-		while (questionCount > 0) {
-			String line = s.nextLine();
-			String[] tokens = line.split(":");
-			String[] keys = tokens[1].split(",");
-			int a = keys.length;
-			if (a <= 1) {
-				System.out.println("trick question  does not have enough answer choices");
-				return;
+		try {
+			while (questionCount > 0) {
+				String line = s.nextLine();
+				String[] tokens = line.split(":");
+				String[] keys = tokens[1].split(",");
+				int a = keys.length;
+				if (a <= 1) {
+					System.out.println("trick question  does not have enough answer choices");
+					return;
+				}
+				if (tokens[4] == "") {
+					System.out.println("Error! Malformed question");
+					return;
+				}
+				if (Integer.parseInt(tokens[3]) < 0) {
+					System.out.println("Invalid max marks for question about sony");
+					return;
+				}
+				if (!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
+					System.out.println("Error! Correct answer choice number is out of range for question text 1");
+					return;
+				}
+				Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
+				questionList.add(q);
+				questionCount--;
 			}
-			if(tokens[4] == ""){
-				System.out.println("Error! Malformed question");
-				return;
+			int b = questionList.size();
+			if (b != 0) {
+				System.out.println(b + " are added to the quiz");
+			} else {
+				System.out.println("Quiz does not have questions");
 			}
-			if (Integer.parseInt(tokens[3]) < 0) {
-				System.out.println("Invalid max marks for question about sony");
-				return;
-			}
-			if (!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
-				System.out.println("Error! Correct answer choice number is out of range for question text 1");
-				return;
-			}
-			Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
-			questionList.add(q);
-			questionCount--;
+		} catch (Exception e) {
+			System.out.println("Error! Malformed question");
 		}
-		int b = questionList.size();
-		if (b != 0) {
-			System.out.println(b + " are added to the quiz");
-		} else {
-			System.out.println("Quiz does not have questions");
-		}
+
 	}
 
 	/**
