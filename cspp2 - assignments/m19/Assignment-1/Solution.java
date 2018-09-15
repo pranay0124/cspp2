@@ -1,18 +1,29 @@
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.ArrayList;
-
+/**
+ * Class for quiz.
+ */
 class Quiz {
     String question;
     String[] choices;
     String answer;
     String marks;
     String penalty;
-
+    /**
+     * Constructs the object.
+     */
     Quiz() {
 
     }
-
+    /**
+     * Constructs the object.
+     *
+     * @param      question  The question
+     * @param      choices   The choices
+     * @param      answer    The answer
+     * @param      marks     The marks
+     * @param      penalty   The penalty
+     */
     Quiz(String question, String[] choices, String answer, String marks, String penalty) {
         this.question = question;
         this.choices = choices;
@@ -46,7 +57,13 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
+    /**
+     * { var_description }
+     */
     static ArrayList<Quiz> questionList = new ArrayList<Quiz>();
+    /**
+     * { var_description }
+     */
     static ArrayList<String> answerList = new ArrayList<String>();
     /**
     * Constructs the object.
