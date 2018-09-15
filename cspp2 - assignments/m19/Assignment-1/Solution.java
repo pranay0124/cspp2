@@ -118,7 +118,7 @@ public final class Solution {
 				System.out.println("trick question  does not have enough answer choices");
 				return;
 			}
-			if(Integer.parseInt(tokens[3]) < 0) {
+			if (Integer.parseInt(tokens[3]) < 0) {
 				System.out.println("Invalid max marks for question about sony");
 				return;
 			}
@@ -146,18 +146,21 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
-		for (int i = 0; i < questionList.size(); i++) {
-			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
-			for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
-				System.out.print(questionList.get(i).choices[j] + "	");
+		if (questionList.size() > 0) {
+			for (int i = 0; i < questionList.size(); i++) {
+				System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
+				for (int j = 0 ; j < questionList.get(i).choices.length; j++) {
+					System.out.print(questionList.get(i).choices[j] + "	");
+				}
+				// int z = questionList.get(i).choices.length;
+				// while (z > 0) {
+				// 	System.out.println(questionList.get(i).choices[] + "        ");
+				// }
+				System.out.println();
+				System.out.println();
 			}
-			// int z = questionList.get(i).choices.length;
-			// while (z > 0) {
-			// 	System.out.println(questionList.get(i).choices[] + "        ");
-			// }
-			System.out.println();
-			System.out.println();
 		}
+
 		while (answerCount > 0) {
 			String line = s.nextLine();
 			String[] key = line.split(" ");
