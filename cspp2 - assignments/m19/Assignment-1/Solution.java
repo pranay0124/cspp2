@@ -155,10 +155,8 @@ public final class Solution {
 			System.out.println();
 		}
 		while (answerCount > 0) {
-			//System.out.println(answerCount + " counttt");
 			String line = s.nextLine();
 			String[] key = line.split(" ");
-			//System.out.println(line + " lineeeee");
 			if (key[1].equals("a")) {
 				key[1] = "1";
 			} else if (key[1].equals("b") ) {
@@ -183,7 +181,6 @@ public final class Solution {
 		int finalScore = 0;
 		for (int i = 0; i < questionList.size(); i++) {
 			System.out.println(questionList.get(i).question);
-			//System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
 			if (answerList.get(i).equals(questionList.get(i).answer)) {
 				System.out.println(" Correct Answer! - Marks Awarded: " + questionList.get(i).marks);
 				finalScore += Integer.parseInt(questionList.get(i).marks);
