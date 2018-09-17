@@ -144,7 +144,7 @@ public final class Solution {
 					System.out.println("Error! Correct answer choice number is out of range for question text 1");
 					return;
 				}
-				if (Integer.parseInt(tokens[3]) > 0) {
+				if (Integer.parseInt(tokens[4]) > 0) {
 					System.out.println("Invalid penalty for question about sony");
 					return;
 				}
