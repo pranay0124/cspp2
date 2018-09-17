@@ -184,7 +184,7 @@ public final class Solution {
 			System.out.print(questionList.get(i).choices[questionList.get(i).choices.length - 1]);
 			System.out.println();
 		}
-		if (answerCount > 0) {
+		if (questionList.size() > 0) {
 			System.out.println();
 		}
 
