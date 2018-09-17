@@ -132,7 +132,7 @@ public final class Solution {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
 				}
-				if (tokens[4] == "") {
+				if (tokens[4] == "" || tokens[0] == "") {
 					System.out.println("Error! Malformed question");
 					return;
 				}
@@ -142,6 +142,10 @@ public final class Solution {
 				}
 				if (!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
 					System.out.println("Error! Correct answer choice number is out of range for question text 1");
+					return;
+				}
+				if (Integer.parseInt(tokens[3]) > 0) {
+					System.out.println("Invalid penalty for question about sony");
 					return;
 				}
 				Quiz q = new Quiz(tokens[0], keys, tokens[2], tokens[3], tokens[4]);
