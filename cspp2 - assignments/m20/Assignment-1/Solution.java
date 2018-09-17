@@ -159,8 +159,9 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-        questions = new Question[10];
         final int zero = 0;
+        final int ten = 10;
+        questions = new Question[ten];
         size = zero;
     }
     /**
@@ -206,8 +207,8 @@ class Quiz {
                      + question.getMaxMarks();
                 marks += question.getMaxMarks();
             } else {
-                s += "Wrong Answer! " + '-' + " Penalty: " +
-                     question.getPenalty();
+                s += "Wrong Answer! " + '-' + " Penalty: "
+                    + question.getPenalty();
                 marks += question.getPenalty();
             }
             s += '\n';
@@ -283,11 +284,12 @@ public final class Solution {
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
-                                     final Quiz quiz, final int q) throws Exception {
+                        final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -296,7 +298,9 @@ public final class Solution {
         final int three = 3;
         final int four = 4;
         final int five = 5;
-        if (q == 0) throw new Exception("Quiz does not have questions");
+        if (q == 0) {
+            throw new Exception("Quiz does not have questions");
+        }
         for (int  i = 0; i < q; i++) {
             String[] tokens = scan.nextLine().split(":");
             for (String token : tokens)
@@ -322,7 +326,7 @@ public final class Solution {
         }
         System.out.println(q + " are added to the quiz");
 
-
+        
     }
     /**
      * Starts a quiz.
