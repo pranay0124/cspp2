@@ -173,6 +173,21 @@ public final class Solution {
 		// store the user respones in the quiz object
 		// if (questionList.size() > 0) {
 
+		for (int i = 0; i < questionList.size(); i++) {
+			if (i > 0) {
+				System.out.println();;
+			}
+			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
+			for (int j = 0 ; j < questionList.get(i).choices.length - 1; j++) {
+				System.out.print(questionList.get(i).choices[j] + "	");
+			}
+			System.out.print(questionList.get(i).choices[questionList.get(i).choices.length - 1]);
+			System.out.println();
+		}
+		if (answerCount > 0) {
+			System.out.println();
+		}
+
 		while (answerCount > 0) {
 			String line = s.nextLine();
 			String[] key = line.split(" ");
@@ -187,21 +202,6 @@ public final class Solution {
 			}
 			answerList.add(key[1]);
 			answerCount--;
-		}
-
-		for (int i = 0; i < questionList.size(); i++) {
-			if (i > 0) {
-				System.out.println();;
-			}
-			System.out.println(questionList.get(i).question + "(" + questionList.get(i).marks + ")");
-			for (int j = 0 ; j < questionList.get(i).choices.length - 1; j++) {
-				System.out.print(questionList.get(i).choices[j] + "	");
-			}
-			System.out.print(questionList.get(i).choices[questionList.get(i).choices.length - 1]);
-			System.out.println();
-		}
-		if (answerCount > 0) {
-			System.out.println();
 		}
 
 	}
