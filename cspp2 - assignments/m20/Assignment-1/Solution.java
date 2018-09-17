@@ -333,7 +333,7 @@ public final class Solution {
         }
         System.out.println(q + " are added to the quiz");
 
- 
+
     }
     /**
      * Starts a quiz.
