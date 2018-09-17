@@ -187,7 +187,7 @@ class Quiz {
      * @return     The questions.
      */
     public Question[] getQuestions() {
-        // System.out.println(Arrays.toString(Arrays.copyOf(questions, size)));
+
         return Arrays.copyOf(questions, size);
     }
     /**
@@ -202,10 +202,12 @@ class Quiz {
         for (Question question : getQuestions()) {
             s += question.getQuestionText() + '\n' + ' ';
             if (question.evaluateResponse(question.getResponse())) {
-                s += "Correct Answer! " + '-' + " Marks Awarded: " + question.getMaxMarks();
+                s += "Correct Answer! " + '-' + " Marks Awarded: "
+                     + question.getMaxMarks();
                 marks += question.getMaxMarks();
             } else {
-                s += "Wrong Answer! " + '-' + " Penalty: " + question.getPenalty();
+                s += "Wrong Answer! " + '-' + " Penalty: " +
+                     question.getPenalty();
                 marks += question.getPenalty();
             }
             s += '\n';
@@ -298,14 +300,19 @@ public final class Solution {
             if (tokens.length < 5)
                 throw new Exception("Error! Malformed question");
             if (tokens[1].split(",").length < 2)
-                throw new Exception(tokens[0] + " does not have enough answer choices");
+                throw new Exception(tokens[0]
+                                    + " does not have enough answer choices");
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length)
-                throw new Exception("Error! Correct answer choice number is out of range for question text " + (i + 1));
+                throw new Exception("Error! Correct answer choice number"
+                                + " is out of range for question text " + (i + 1));
             if (Integer.parseInt(tokens[3]) < 0)
                 throw new Exception("Invalid max marks for " + tokens[0]);
             if (Integer.parseInt(tokens[4]) > 0)
                 throw new Exception("Invalid penalty for " + tokens[0]);
-            quiz.addQuestion(new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4])));
+            quiz.addQuestion(new Question(tokens[0], tokens[1].split(","),
+                              Integer.parseInt(tokens[2]),
+                              Integer.parseInt(tokens[3]),
+                              Integer.parseInt(tokens[4])));
             // System.out.println(i);
         }
         System.out.println(q + " are added to the quiz");
