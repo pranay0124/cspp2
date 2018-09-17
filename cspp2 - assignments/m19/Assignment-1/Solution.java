@@ -132,7 +132,7 @@ public final class Solution {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
 				}
-				if (tokens[4] == "" || tokens[0] == "") {
+				if (tokens[4].equals("") || tokens[0].equals("")) {
 					System.out.println("Error! Malformed question");
 					return;
 				}
