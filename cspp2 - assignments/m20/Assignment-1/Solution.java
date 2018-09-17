@@ -4,7 +4,6 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.ArrayList;
 /**
  * Class for question.
  */
@@ -161,7 +160,8 @@ class Quiz {
      */
     Quiz() {
         questions = new Question[10];
-        size = 0;
+        final int zero = 0;
+        size = zero;
     }
     /**
      * Adds a question.
@@ -291,15 +291,20 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int one = 1;
+        final int two = 2;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
         if (q == 0) throw new Exception("Quiz does not have questions");
         for (int  i = 0; i < q; i++) {
             String[] tokens = scan.nextLine().split(":");
             for (String token : tokens)
                 if (token.equals(""))
                     throw new Exception("Error! Malformed question");
-            if (tokens.length < 5)
+            if (tokens.length < five)
                 throw new Exception("Error! Malformed question");
-            if (tokens[1].split(",").length < 2)
+            if (tokens[1].split(",").length < two)
                 throw new Exception(tokens[0]
                                     + " does not have enough answer choices");
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length)
