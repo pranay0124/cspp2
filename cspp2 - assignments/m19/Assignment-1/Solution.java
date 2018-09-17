@@ -172,7 +172,7 @@ public final class Solution {
 		// read the user responses from the console
 		// store the user respones in the quiz object
 		// if (questionList.size() > 0) {
-		
+
 		while (answerCount > 0) {
 			String line = s.nextLine();
 			String[] key = line.split(" ");
@@ -200,7 +200,10 @@ public final class Solution {
 			System.out.print(questionList.get(i).choices[questionList.get(i).choices.length - 1]);
 			System.out.println();
 		}
-		System.out.println();
+		if (answerCount > 0) {
+			System.out.println();
+		}
+
 	}
 
 	/**
