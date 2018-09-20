@@ -120,7 +120,7 @@ public class Distance {
 				// System.out.println(keymap1+ "-----"+ keymap2);
 				if (keymap1.equals(keymap2)) {
 					dotproduct += (map1.get(keymap1) * map2.get(keymap2));
-					System.out.println(dotproduct);
+					// System.out.println(dotproduct);
 				}
 			}
 		}
