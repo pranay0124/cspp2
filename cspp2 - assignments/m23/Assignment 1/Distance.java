@@ -56,8 +56,8 @@ public class Distance {
 			while (scan.hasNext()) {
 				numOfLines++;
 				line = scan.nextLine();
-				line = line.replaceAll("[^A-Za-z-0-9 ]", "");
-				line = line.replaceAll("\\s", "");
+				//line = line.replaceAll("[^A-Za-z-0-9 ]", "");
+				//line = line.replaceAll("\\s", "");
 				String[] words = line.toLowerCase().split("\\W");
 				for (String word : words) {
 					if (dict.containsKey(word)) {
