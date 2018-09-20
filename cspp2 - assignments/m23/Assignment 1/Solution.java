@@ -4,9 +4,19 @@ import java.io.File;
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
+	/**
+		 * Constructs the object.
+		 */
+	private Solution() {
+		//Zero Parameter Constructor.
+	}
+	/**
+	 * Main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
-
 		try {
 			Scanner scan = new Scanner(System.in);
 			String input = scan.nextLine();
