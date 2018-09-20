@@ -1,6 +1,9 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.io.File;
 
+/**
+ * Class for solution.
+ */
 class Solution {
 	public static void main(String[] args) {
 
