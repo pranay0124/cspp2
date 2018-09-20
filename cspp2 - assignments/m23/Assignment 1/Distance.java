@@ -117,9 +117,10 @@ public class Distance {
 		}
 		for (String keymap1 : map1.keySet()) {
 			for (String keymap2 : map2.keySet()) {
-				System.out.println(keymap1+ "-----"+ keymap2);
+				// System.out.println(keymap1+ "-----"+ keymap2);
 				if (keymap1.equals(keymap2)) {
-					dotproduct += map1.get(keymap1) * map2.get(keymap2);
+					dotproduct += (map1.get(keymap1) * map2.get(keymap2));
+					System.out.println(dotproduct);
 				}
 			}
 		}
