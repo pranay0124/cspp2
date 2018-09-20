@@ -25,8 +25,8 @@ public class Distance {
 	private int numOfLines;
 	private int numOfWords;
 	private int numOfDistinctWords;
-	// private double dotproduct;
-	// private double norm;
+	private double dotproduct;
+	private double norm;
 
 	// public Distance(String input) {
 	// 	String[] lines = input.split("\n");
