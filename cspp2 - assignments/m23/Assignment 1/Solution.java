@@ -9,8 +9,8 @@ class Solution {
 			String input = scan.nextLine();
 			File folder = new File(input);
 			File[] files = folder.listFiles();
-			double ans;
-			double maxval = 0;
+			int ans;
+			int maxval = 0;
 			String file1 = null;
 			String file2 = null;
 			System.out.print("\t\t"); //p
@@ -24,7 +24,7 @@ class Solution {
 				for (File secondfile : files) {
 					Distance map1 = new Distance(firstfile);
 					Distance map2 = new Distance(secondfile);
-					ans = map1.angle(map2);
+					ans = (int)Math.round(map1.angle(map2));
 					if (ans > maxval && !firstfile.getName().equals(secondfile.getName())) {
 						maxval = ans;
 						file1 = firstfile.getName();
