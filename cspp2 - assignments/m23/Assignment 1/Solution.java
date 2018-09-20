@@ -20,7 +20,7 @@ class Solution {
 			System.out.print(files[files.length - 1].getName()); //p
 			System.out.println(); //p
 			for (File firstfile : files) {
-				System.out.print(firstfile.getName() + "/t"); //p
+				System.out.print(firstfile.getName() + "\t"); //p
 				for (File secondfile : files) {
 					Distance map1 = new Distance(firstfile);
 					Distance map2 = new Distance(secondfile);
