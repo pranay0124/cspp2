@@ -37,7 +37,7 @@ public final class Solution {
                 for (File secondfile : files) {
                     Distance map1 = new Distance(firstfile);
                     Distance map2 = new Distance(secondfile);
-                    ans = (int)Math.round(map1.angle(map2));
+                    ans = (int) Math.round(map1.angle(map2));
                     if (ans > maxval && !firstfile.getName().equals(
                                 secondfile.getName())) {
                         maxval = ans;
@@ -48,8 +48,8 @@ public final class Solution {
                 }
                 System.out.println();
             }
-            System.out.println("Maximum similarity is between " + file1 +
-                               " and " + file2);
+            System.out.println("Maximum similarity is between " + file1
+                               + " and " + file2);
         } catch (Exception e) {
             System.out.println("empty directory");
         }
