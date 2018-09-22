@@ -9,7 +9,6 @@ public class TodoistMain {
     TodoistMain() {
         //Zero Parameter Constructor.
     }
-
     /**
      * Starts a test.
      */
