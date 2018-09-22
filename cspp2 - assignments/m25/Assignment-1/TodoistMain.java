@@ -38,14 +38,6 @@ class Task {
         return important;
     }
 
-    // public boolean setImportant(boolean boo) {
-    //     if(boo == true) {
-    //         this.important = "Important";
-    //     } else {
-    //         this.important = "Not Important";
-    //     }
-    // }
-
     public boolean getUrgent() {
         return urgent;
     }
@@ -79,6 +71,10 @@ class Todoist {
     Todoist() {
         tasks = new Task[10];
         size = 0;
+    }
+
+    public int size() {
+        return size;
     }
 
     public void addTask(final Task task1) {
@@ -129,7 +125,7 @@ public class TodoistMain {
                 System.out.println(todo);
                 break;
             // case "get-next":
-            //     getNextTask(todo, tokens[1]);
+            //     System.out.println(todo.getNextTask(tokens[1]));
             //     break;
             // case "get-next-n":
             //     int n = Integer.parseInt(tokens[2]);
@@ -145,13 +141,9 @@ public class TodoistMain {
         }
     }
 
-    // public static Task getNextTask(final Todoist todo, final String name) {
-    //     for (int i = 0; i < todo.length(); i++) {
-    //         if(todo[i].getAssignedTo().equals(name)) {
-    //             if(todo[i].getStatus().equals("todo")) {
-    //                 return tasks[i];
-    //             }
-    //         }
+    // public static Todoist getNextTask(final String name) {
+    //     for (int i = 0; i < tasks.size(); i++) {
+    //         return tasks[i];
     //     }
     // }
 
@@ -164,7 +156,6 @@ public class TodoistMain {
     public static void testAddTask(final Todoist todo, final String[] tokens) {
         try {
             todo.addTask(createTask(tokens));
-            System.out.println(todo);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -193,10 +184,10 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        if (tokens[1] == "") {
+            throw new Exception("Title not provided");
+        }
         String title = tokens[1];
-        // if (tokens[1] == "") {
-        //     throw new Exception("Title not provided");
-        // }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         if (timeToComplete < 0) {
