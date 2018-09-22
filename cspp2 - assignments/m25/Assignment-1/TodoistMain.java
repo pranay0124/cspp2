@@ -184,6 +184,7 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        System.out.println(tokens.length);
         if (tokens.length < 6) {
             throw new Exception("Title not provided");
         }
