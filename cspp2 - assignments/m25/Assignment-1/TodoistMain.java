@@ -72,6 +72,38 @@ class Task {
     }
 }
 
+class Todoist {
+    Task[] tasks;
+    int size;
+
+    Todoist() {
+        tasks = new Task[10];
+        size = 0;
+    }
+
+    public void addTask(final Task task1) {
+        try {
+            tasks[size] = task1;
+            size++;
+        } catch (Exception e) {
+            resize();
+            addTask(task1);
+        }
+    }
+
+    private void resize() {
+        tasks = Arrays.copyOf(tasks, 2 * tasks.length);
+    }
+
+    public String toString() {
+        for (int i = 0; i < size; i++) {
+            System.out.println(tasks[i]);
+        }
+        return null;
+    }
+
+}
+
 /**
  * Class for todoist main.
  */
@@ -81,7 +113,7 @@ public class TodoistMain {
      * Starts a test.
      */
     public static void startTest() {
-        // Todoist todo = new Todoist();
+        Todoist todo = new Todoist();
         Scanner s = new Scanner(System.in);
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
@@ -89,12 +121,12 @@ public class TodoistMain {
             case "task":
                 testTask(tokens);
                 break;
-            // case "add-task":
-            //     testAddTask(todo, tokens);
-            //     break;
-            // case "print-todoist":
-            //     System.out.println(todo);
-            //     break;
+            case "add-task":
+                testAddTask(todo, tokens);
+                break;
+            case "print-todoist":
+                System.out.println(todo);
+                break;
             // case "get-next":
             //     System.out.println(todo.getNextTask(tokens[1]));
             //     break;
@@ -118,13 +150,13 @@ public class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    // public static void testAddTask(final Todoist todo, final String[] tokens) {
-    //     try {
-    //         todo.addTask(createTask(tokens));
-    //     } catch (Exception e) {
-    //         System.out.println(e.getMessage());
-    //     }
-    // }
+    public static void testAddTask(final Todoist todo, final String[] tokens) {
+        try {
+            todo.addTask(createTask(tokens));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
     /**
      * method to test the creation of task object.
@@ -155,7 +187,7 @@ public class TodoistMain {
         // }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
-        if(timeToComplete < 0) {
+        if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
         boolean important = tokens[4].equals("y");
