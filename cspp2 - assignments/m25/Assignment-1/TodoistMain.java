@@ -150,20 +150,20 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
-        if (title == "") {
+        if (title == " ") {
             throw new Exception("Title not provided");
         }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         if(timeToComplete < 0) {
-            throw new Exception("Invalid timeToComplete" + timeToComplete);
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        if(!(status == "todo" || status == "done")) {
-            throw new Exception("Invalid status" + status);
-        }
+        // if(status != "todo" && status != "done") {
+        //     throw new Exception("Invalid status" + status);
+        // }
         return new Task(
                    title, assignedTo, timeToComplete, important, urgent, status);
     }
