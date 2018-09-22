@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+class TodoistMain {
     /**
      * Constructs the object.
      */
