@@ -184,8 +184,8 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-        System.out.println(Arrays.toString(tokens));
-        if (tokens[1] == "") {
+        // System.out.println(Arrays.toString(tokens));
+        if (tokens[1].equals("")) {
             throw new Exception("Title not provided");
         }
         String title = tokens[1];
@@ -197,9 +197,8 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        System.out.println(status);
-        if (status != "todo") {
-            if (status != "done") {
+        if (status == "todo") {
+            if (status == "done") {
                 throw new Exception("invalid status");
             }
         }
