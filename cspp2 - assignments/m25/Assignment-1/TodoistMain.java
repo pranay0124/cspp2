@@ -132,9 +132,9 @@ public class TodoistMain {
             //     Task[] tasks = todo.getNextTask(tokens[1], n);
             //     System.out.println(Arrays.deepToString(tasks));
             //     break;
-            case "total-time":
-                totalTime4Completion(todo);
-                break;
+            // case "total-time":
+            //     totalTime4Completion(todo);
+            //     break;
             default:
                 break;
             }
@@ -149,12 +149,13 @@ public class TodoistMain {
     //     return null;
     // }
 
-    public static void totalTime4Completion(final Todoist todo) {
-        System.out.println(todo + "data");
-        for (int i = 0; i < todo.size(); i++) {
-            i++;
-        }
-    }
+    // public static void totalTime4Completion(final Todoist todo) {
+    //     int sum = 0;
+    //     for(int each : todo) {
+    //         sum = sum + todo[2];
+    //     }
+    //     System.out.println(sum);
+    // }
     /**
      * method to test add task.
      *
