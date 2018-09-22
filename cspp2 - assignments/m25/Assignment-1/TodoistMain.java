@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**
  * Class for todoist main.
  */
-class TodoistMain {
+public class TodoistMain {
     /**
      * Constructs the object.
      */
-    TodoistMain() {
+    private TodoistMain() {
         //Zero Parameter Constructor.
     }
     /**
@@ -118,7 +118,7 @@ class TodoistMain {
             }
         }
         return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+                title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
