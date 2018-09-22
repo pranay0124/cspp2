@@ -34,4 +34,13 @@ class Todoist {
         return str;
     }
 
+    public void totalTime4Completion() {
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            if (tasks[i].getStatus().equals("todo")) {
+                sum += tasks[i].getTimeToComplete();
+            }
+        }
+        System.out.println(sum);
+    }
 }
