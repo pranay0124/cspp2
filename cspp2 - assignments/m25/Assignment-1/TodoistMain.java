@@ -98,7 +98,7 @@ class Todoist {
     public String toString() {
         String str = "";
         for (int i = 0; i < size; i++) {
-            str = tasks[i] + "\n";
+            str += tasks[i] + "\n";
         }
         return str;
     }
