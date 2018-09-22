@@ -1,9 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
-
-/**
-  * write your code below this comment.
-  */
 /**
  * Class for todoist main.
  */
