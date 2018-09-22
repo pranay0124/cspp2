@@ -3,6 +3,12 @@ import java.util.Scanner;
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+     * Constructs the object.
+     */
+    TodoistMain() {
+        //Zero Parameter Constructor.
+    }
 
     /**
      * Starts a test.
