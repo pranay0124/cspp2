@@ -150,7 +150,7 @@ public class TodoistMain {
     // }
 
     public static void totalTime4Completion(final Todoist todo) {
-        System.out.println(todo);
+        System.out.println(todo + "data");
         for (int i = 0; i < todo.size(); i++) {
             i++;
         }
