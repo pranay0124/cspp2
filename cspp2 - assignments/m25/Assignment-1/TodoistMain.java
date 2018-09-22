@@ -199,7 +199,7 @@ public class TodoistMain {
         String status = tokens[6];
         if (!(status.equals("todo"))) {
             if (!(status.equals("done"))) {
-                throw new Exception("invalid status");
+                throw new Exception("Invalid status " + status);
             }
         }
         return new Task(
