@@ -111,7 +111,7 @@ public final class TodoistMain {
             }
         }
         return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+                title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
