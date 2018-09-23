@@ -52,13 +52,18 @@ public class Distance {
 	public Distance(File inputfile) {
 		String line = null;
 		try {
-			Scanner scan = new Scanner(inputfile);
+			FileReader file = new FileReader(inputfile);
+			Scanner scan = new Scanner(file);
 			while (scan.hasNext()) {
 				numOfLines++;
-				line = scan.nextLine();
+				line = scan.useDelimiter("\\A").next();
+			}
+			if (line != null) {
+				String[] words = line.split(" ");
 				//line = line.replaceAll("[^A-Za-z-0-9 ]", "");
 				//line = line.replaceAll("\\s", "");
-				String[] words = line.toLowerCase().split("\\W");
+				// String[] words = line.toLowerCase().split("\\W");
+
 				for (String word : words) {
 					if (dict.containsKey(word)) {
 						int a = dict.get(word);
@@ -70,12 +75,10 @@ public class Distance {
 							dict.put(word, 1);
 							numOfWords++;
 						}
-
 					}
-
 				}
+				numOfDistinctWords = dict.size();
 			}
-			numOfDistinctWords = dict.size();
 		} catch (Exception e) {
 			System.out.println("File not found");
 		}
