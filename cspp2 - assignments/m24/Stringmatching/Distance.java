@@ -54,8 +54,8 @@ public class Distance {
 			if (inputFile1.getName().equals(inputFile2.getName())) {
 				ans = 100;
 			} else {
-				int numerator = lcs.length() * 2 * 100;
-				int denominator = s1.length() + s2.length();
+				double numerator = lcs.length() * 2 * 100;
+				double denominator = s1.length() + s2.length();
 				ans = Math.round((numerator / denominator));
 			}
 			System.out.format("%13.1f", ans);
