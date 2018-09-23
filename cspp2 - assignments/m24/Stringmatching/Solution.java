@@ -46,7 +46,7 @@ public final class Solution {
                 System.out.print(" ");
                 System.out.println();
             }
-            System.out.print(" ");
+            // System.out.print(" ");
             System.out.println("Maximum similarity is between " + file1
                                + " and " + file2);
         } catch (Exception e) {
